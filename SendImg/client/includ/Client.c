@@ -41,20 +41,21 @@ int RecvImgMessage(const int& connetfd)
     struct Packet phs[1];
 
     while(1)//数据包的解析函数
-    {//具体逻辑不太好形容，反正写的很懒
+    {//具体逻辑不太好形容，反正写的很烂
         memset(phs,'\0',PACKETSIZE);
+        memset(buf,'\0',SIZE);
         num = recv(connetfd,phs,PACKETSIZE,0);
         if(num > 0)
         {
             if(strcmp(buf,phs->filename) != 0)
             {
-                memset(buf,'\0',SIZE);
                 strcpy(buf,phs->filename);
                 imgfd = CreateImgFd(phs->filename);
                 CreateMegFile(phs);
                 Writen(imgfd,phs->data,DATASIZE);
                 while(1)
                 {
+                    memset(phs,'\0',PACKETSIZE);
                     num = recv(connetfd,phs,PACKETSIZE,0);
                     if(num > 0)
                     {
@@ -110,9 +111,9 @@ int CreateDirent()
 int CreateImgFd(const char* pos)//创建图片文件的Fd
 {
     int imgfd;
-    char img[128];
+    char img[256];
 
-    memset(img,'\0',128);
+    memset(img,'\0',256);
     strcpy(img,"/home/will/recv_img/");
     strcat(img,pos);
 

@@ -70,6 +70,7 @@ struct Packet//传送包1292
 
 struct File//套接字传输结构体
 {
+    int connetfd;
     struct Packet poet;
     struct File* next;
 };
