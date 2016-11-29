@@ -97,6 +97,7 @@ int main(int argc,char** argv)
             beforeconnetfd = connetfd;   
         }
         ++times;
+	printf("Server Send Finish!\n");
         printf("/********************************************/\n");
     }
 
@@ -126,7 +127,7 @@ static void* ReadImgMessage(void* arg)//文件读取线程
             continue;
             
         strcat(buf,dirp->d_name);
-        printf("%d%s\n",size,buf);//在终端输出发送信息
+//        printf("%d%s\n",size,buf);//在终端输出发送信息
         ++size;
         if(stat(buf,&sta) < 0)
         {

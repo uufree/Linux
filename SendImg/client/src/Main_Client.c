@@ -52,6 +52,7 @@ int main(int argc,char** argv)
                 break;
             }
         }
+	printf("Client Recv Finish!\n");
         printf("/*********************************************/\n");
     }
 

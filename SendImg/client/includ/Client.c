@@ -117,7 +117,7 @@ int CreateImgFd(const char* pos)//创建图片文件的Fd
     strcpy(img,"/home/will/recv_img/");
     strcat(img,pos);
 
-    printf("%d%s\n",n,img);
+//    printf("%d%s\n",n,img);
     ++n;
 
     if((imgfd=open(img,O_CREAT|O_WRONLY|O_APPEND,S_IRWXU)) < 0)
