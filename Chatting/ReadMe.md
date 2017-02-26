@@ -1,3 +1,0 @@
-- 使用现代C++技术完成一个基于阻塞IO的Chatting Server
-- 基于muduo库的思想，凭自己的理解描述muduo，不直接copy
-- 后期使用Qt完成客户端，如果时间充裕，使用python做测试夹具
