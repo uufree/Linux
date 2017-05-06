@@ -14,69 +14,66 @@
 #include"Condition.h"
 
 //多线程任务队列神器
-namespace unet
+namespace thread
 {
-    namespace thread
+    template<typename T>
+    class TaskQueue final
     {
-        template<typename T>
-        class TaskQueue final
-        {
-            public:
-                explicit TaskQueue() : mutex(),notempty(mutex),queue() {};
+        public:
+            explicit TaskQueue() : mutex(),notempty(mutex),queue() {};
 
-                TaskQueue(const TaskQueue&) = delete;
-                TaskQueue(TaskQueue&&) = delete;
-                TaskQueue& operator=(const TaskQueue&) = delete;
-                ~TaskQueue() {};
+            TaskQueue(const TaskQueue&) = delete;
+            TaskQueue(TaskQueue&&) = delete;
+            TaskQueue& operator=(const TaskQueue&) = delete;
+            ~TaskQueue() {};
 
-                void put(const T& task)
-                {
-                    MutexLockGuard guard(mutex);
-                    queue.push_back(task);
-                    notempty.notify();
-                }
+            void put(const T& task)
+            {
+                MutexLockGuard guard(mutex);
+                queue.push_back(task);
+                notempty.notify();
+            }
 
 //将C++11的move特性与旧版的区别开来            
 #ifdef __GXX_EXPERIMENTAL_CXX0X__
-                void put(T&& task)//调用者使用std::move
-                {
-                    MutexLockGuard guard(mutex);
-                    queue.push_back(task);
-                    notempty.notify();
-                }
+            void put(T&& task)//调用者使用std::move
+            {
+                MutexLockGuard guard(mutex);
+                queue.push_back(task);
+                notempty.notify();
+            }
 #endif                
             
-                T get()
-                {
-                    MutexLockGuard guard(mutex);
+            T get()
+            {
+                MutexLockGuard guard(mutex);
                 
-                    while(queue.empty())
-                    {
-                        notempty.wait();
-                    }
-                    assert(!queue.empty());
+                while(queue.empty())
+                {
+                    notempty.wait();
+                }
+                assert(!queue.empty());
 
 #ifdef __GXX_EXPERIMENTAL_CXX0X__
-                    T retu(std::move(queue.front()));
+                T retu(std::move(queue.front()));
 #else
-                    T retu(queue.front());
+                T retu(queue.front());
 #endif
-                    queue.pop_front();
-                    return retu;
-                }
+                queue.pop_front();
+                return retu;
+            }
 
-                size_t size()
-                {
-                    MutexLockGuard guard(mutex);
-                    return queue.size();
-                }
+            size_t size()
+            {
+                MutexLockGuard guard(mutex);
+                return queue.size();
+            }
 
-            private:
-                std::deque<T> queue;
-                mutable MutexLock mutex;
-                Condition notempty;
-        };
-    }
+        private:
+            std::deque<T> queue;
+            mutable MutexLock mutex;
+            Condition notempty;
+    };
 }
 
 

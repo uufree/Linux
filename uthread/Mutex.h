@@ -12,88 +12,86 @@
 #include<sys/syscall.h>
 #include<unistd.h>
 
-namespace unet
+namespace now
 {
-    namespace now
+    inline pid_t pid()
     {
-        inline pid_t pid()
-        {
-            return ::syscall(SYS_gettid);
-        }
+        return ::syscall(SYS_gettid);
     }
+}
 
-    namespace thread
-    {    
-        class MutexLock final
-        {
-            public:
-                explicit MutexLock() : pid(0)
-                {
-                    pthread_mutex_init(&mutex,NULL);
-                };
-
-                MutexLock(const MutexLock&) = delete;
-                MutexLock& operator=(const MutexLock&) = delete;
-                MutexLock(MutexLock&&) = delete;
-
-                bool isLockInThisThread() const
-                {
-                    return pid == now::pid();
-                };
-
-                const pid_t getPid()
-                {
-                    return pid;
-                }
-
-                void lock()
-                {
-                    ::pthread_mutex_lock(&mutex);
-                    pid = now::pid();
-                };
-
-                pthread_mutex_t* getMutex()
-                {
-                    return &mutex;
-                };
-
-                void unlock()
-                {
-                    pid = 0;
-                    ::pthread_mutex_unlock(&mutex);
-                };
+namespace thread
+{    
+    class MutexLock final
+    {
+        public:
+            explicit MutexLock() : pid(0)
+            {
+                pthread_mutex_init(&mutex,NULL);
+            };
             
-                ~MutexLock()
-                {
-                    ::pthread_mutex_destroy(&mutex);
-                }
+            ~MutexLock()
+            {
+                ::pthread_mutex_destroy(&mutex);
+            }
 
-            private:
-                pid_t pid;
-                pthread_mutex_t mutex;
-        };
+            MutexLock(const MutexLock&) = delete;
+            MutexLock& operator=(const MutexLock&) = delete;
+            MutexLock(MutexLock&&) = delete;
+
+            bool isLockInThisThread() const
+            {
+                return pid == now::pid();
+            };
+/*
+            pid_t getPid() const
+            {
+                return pid;
+            }
+*/
+            void lock()
+            {
+                ::pthread_mutex_lock(&mutex);
+                pid = now::pid();
+            };
+
+            pthread_mutex_t* getMutex()
+            {
+                return &mutex;
+            };
+
+            void unlock()
+            {
+                pid = 0;
+                ::pthread_mutex_unlock(&mutex);
+            };
+            
+
+        private:
+            pid_t pid;
+            pthread_mutex_t mutex;
+    };
     
-        class MutexLockGuard final
-        {
-            public:
-                explicit MutexLockGuard(MutexLock& mutex_) : mutex(mutex_)
-                {
-                    mutex.lock();
-                }
+    class MutexLockGuard final
+    {
+        public:
+            explicit MutexLockGuard(MutexLock& mutex_) : mutex(mutex_)
+            {
+                mutex.lock();
+            }
 
-                ~MutexLockGuard()
-                {
-                    mutex.unlock();
-                }
+            ~MutexLockGuard()
+            {
+                mutex.unlock();
+            }
             
-                MutexLockGuard(MutexLockGuard&) = delete;
-                MutexLockGuard& operator=(const MutexLockGuard&) = delete;   
-                MutexLockGuard(MutexLockGuard&&) = delete;
+            MutexLockGuard(MutexLockGuard&) = delete;
+            MutexLockGuard& operator=(const MutexLockGuard&) = delete;   
+            MutexLockGuard(MutexLockGuard&&) = delete;
 
-            private:
-                MutexLock& mutex;
-        }; 
-    }
+        private:
+            MutexLock& mutex;
+    }; 
 }
 
 #endif

@@ -9,77 +9,59 @@
 #define _THREADPOOL_H
 
 #include"Thread.h"
-#include<deque>
+#include"Mutex.h"
+#include"Condition.h"
 #include<map>
-#include<memory>
+#include<deque>
 
-namespace unet
+namespace thread
 {
-    namespace thread
+    class ThreadPool final
     {
-        class ThreadPool final
-        {
-            typedef std::function<void()> ThreadFunc;
-            typedef std::map<pthread_t,Thread> ThreadMap;
+        typedef std::function<void()> ThreadFunc;
+        typedef std::map<pthread_t,Thread> ThreadMap;
+        typedef std::deque<ThreadFunc> TaskQueue;
 
-            public:
-                ThreadPool(int size);
+        public:
+            explicit ThreadPool(int size = 2) : 
+                threadsize(size),
+                mutex(),
+                cond(mutex)
+            {};
+
+            explicit ThreadPool(int size,const ThreadFunc& cb) : 
+                threadsize(size),
+                threadfunc(cb),
+                mutex(),
+                cond(mutex)
+            {};
                 
-                ThreadPool(const ThreadPool& lhs) = delete;
-                ThreadPool& operator=(const ThreadPool& lhs) = delete;
+            ThreadPool(const ThreadPool& lhs) = delete;
+            ThreadPool(ThreadPool&& lhs) = delete;
+            ThreadPool& operator=(const ThreadPool& lhs) = delete;
                 
-                ~ThreadPool();
+            ~ThreadPool();
 
 //public interface
-                void setThreadCallBack(Thread&& cb)
-                {
-                    thread = cb;
-                };
+            void setThreadCallBack(const ThreadFunc& cb)
+            {
+                threadfunc = cb;
+            }
 
-                void setThreadCallBack(const Thread& cb)
-                {
-                    thread = cb;
-                }
+            void start();
+            void joinAll();
+            void addInTaskQueue(const ThreadFunc& task);
+            ThreadFunc&& getTaskInTaskQueue();
 
-                void start();
-                void joinAll();
-
-            private:
-                const int threadsize;
-                ThreadMap threadmap;
-                Thread thread;
-        };
-    }
+        private:
+            const int threadsize;
+            ThreadMap threadmap;
+            ThreadFunc threadfunc;
+            TaskQueue taskqueue;
+            MutexLock mutex;
+            Condition cond;
+    };
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif
 
