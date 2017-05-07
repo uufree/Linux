@@ -24,6 +24,26 @@ namespace thread
         if(isstart)
             assert(::pthread_detach(threadid) == 0 && threadid != 0);
     }
+    
+    Thread::Thread(const Thread& lhs) : threadid(0),
+        isstart(false),
+        threadfunc(lhs.threadfunc)
+    {};
+
+    Thread::Thread(Thread&& lhs) : threadid(0),
+        isstart(false),
+        threadfunc(lhs.threadfunc)
+    {};
+
+    Thread& Thread::operator=(const Thread& lhs)
+    {
+        threadid = 0;
+        isstart = false;
+        threadfunc = lhs.threadfunc;
+
+        return *this;
+    }
+
 
     void Thread::start()
     {
