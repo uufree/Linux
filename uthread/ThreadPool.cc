@@ -11,38 +11,75 @@ namespace thread
 {
     ThreadPool::~ThreadPool()
     {
-        for(auto iter=threadmap.begin();iter!=threadmap.end();++iter)
-            ::pthread_detach(iter->first);
+        started = false;
+        for(int i=0;i<threadsize;++i)
+            ::pthread_detach(threadlistptr[i].getThreadId());
+
+        delete [] threadlistptr;
+    }
+    
+    ThreadPool::ThreadPool(const ThreadPool& lhs) : 
+        started(false),
+        threadsize(lhs.threadsize),
+        threadlistptr(new Thread[threadsize]),
+        threadfunc(lhs.threadfunc),
+        mutex(),
+        cond(mutex)
+    {};
+    
+    ThreadPool::ThreadPool(ThreadPool&& lhs) : 
+        started(false),
+        threadsize(lhs.threadsize),
+        threadlistptr(new Thread[threadsize]),
+        threadfunc(lhs.threadfunc),
+        mutex(),
+        cond(mutex)
+    {};
+
+    ThreadPool& ThreadPool::operator=(const ThreadPool& lhs)
+    {
+        assert(!started);
+        delete [] threadlistptr;
+        threadlistptr = new Thread[threadsize];
+            
+        threadfunc = lhs.threadfunc;
+        taskqueue.clear();
+
+        return *this;
     }
 
     void ThreadPool::start()
     {
-        for(int i=0;i<threadsize;++i)
+        if(!started)
         {
-            Thread thread(threadfunc);
-            thread.start();
-            threadmap.insert({thread.getThreadId(),thread});
+            for(int i=0;i<threadsize;++i)
+            {
+                threadlistptr[i].setThreadCallBack(threadfunc);
+                threadlistptr[i].start();
+            }
+            started = true;
         }
     }
 
     void ThreadPool::joinAll()
     {
-        for(auto iter=threadmap.begin();iter!=threadmap.end();++iter)
-        {
-            ::pthread_join(iter->first,NULL);
-            threadmap.erase(iter);
-        }
+        assert(started);
+        for(int i=0;i<threadsize;++i)
+            threadlistptr[i].join();
     }
 
     void ThreadPool::addInTaskQueue(const ThreadFunc& task)
     {
-        MutexLockGuard guard(mutex);
-        taskqueue.push_back(task);
+        if(started)
+        {
+            MutexLockGuard guard(mutex);
+            taskqueue.push_back(task);
         
-        cond.notify();
+            cond.notify();
+        }
     }
 
-    ThreadFunc&& ThreadPool::getTaskInTaskQueue()
+    ThreadFunc ThreadPool::getTaskInTaskQueue()
     {
         MutexLockGuard guard(mutex);
         while(taskqueue.empty())
@@ -50,6 +87,6 @@ namespace thread
         
         ThreadFunc func(taskqueue.front());
         taskqueue.pop_front();
-        return std::move(func);
+        return func;
     }
 }

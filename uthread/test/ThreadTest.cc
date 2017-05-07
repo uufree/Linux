@@ -11,7 +11,7 @@
 
 void printInt(int num)
 {
-    for(int i=0;i<10;++i)
+    for(int i=0;i<2;++i)
     {
         std::cout << "num: " << num << std::endl;
         ::sleep(1);
@@ -24,13 +24,7 @@ int main(int argc,char** argv)
     thread::Thread thread(std::bind(&printInt,n));
     thread.start();
     
-    sleep(3);
-    
-    thread.exit();
-    std::cout << "thread already stop!" << std::endl;
-
-    sleep(2);
-
+    thread.join();
     return 0;
 }
     

@@ -9,12 +9,13 @@
 #include<iostream>
 
 namespace thread
-{
+{    
     void* runInThread(void* arg)
     {
         ThreadFunc* thread(static_cast<ThreadFunc*>(arg));
 
         (*thread)();
+
         return 0;
     };
        

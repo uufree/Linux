@@ -11,6 +11,7 @@
 #include<pthread.h>
 #include<functional>
 #include<assert.h>
+#include<iostream>
 
 namespace thread
 {

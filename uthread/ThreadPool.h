@@ -11,51 +11,56 @@
 #include"Thread.h"
 #include"Mutex.h"
 #include"Condition.h"
-#include<map>
 #include<deque>
+#include<memory>
 
 namespace thread
 {
     class ThreadPool final
     {
         typedef std::function<void()> ThreadFunc;
-        typedef std::map<pthread_t,Thread> ThreadMap;
         typedef std::deque<ThreadFunc> TaskQueue;
 
         public:
             explicit ThreadPool(int size = 2) : 
+                started(false),
                 threadsize(size),
+                threadlistptr(new Thread[size]),
                 mutex(),
                 cond(mutex)
             {};
 
             explicit ThreadPool(int size,const ThreadFunc& cb) : 
+                started(false),
                 threadsize(size),
+                threadlistptr(new Thread[size]),
                 threadfunc(cb),
                 mutex(),
                 cond(mutex)
             {};
                 
-            ThreadPool(const ThreadPool& lhs) = delete;
-            ThreadPool(ThreadPool&& lhs) = delete;
-            ThreadPool& operator=(const ThreadPool& lhs) = delete;
+            ThreadPool(const ThreadPool& lhs);
+            ThreadPool(ThreadPool&& lhs);
+            ThreadPool& operator=(const ThreadPool& lhs);
                 
             ~ThreadPool();
 
 //public interface
             void setThreadCallBack(const ThreadFunc& cb)
             {
-                threadfunc = cb;
+                if(!started)
+                    threadfunc = cb;
             }
 
             void start();
             void joinAll();
             void addInTaskQueue(const ThreadFunc& task);
-            ThreadFunc&& getTaskInTaskQueue();
+            ThreadFunc getTaskInTaskQueue();
 
         private:
+            bool started;
             const int threadsize;
-            ThreadMap threadmap;
+            Thread* threadlistptr;
             ThreadFunc threadfunc;
             TaskQueue taskqueue;
             MutexLock mutex;
