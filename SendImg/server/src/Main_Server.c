@@ -125,7 +125,7 @@ static void* ReadImgMessage(void* arg)//文件读取线程
     {
         if((strcmp(dirp->d_name,".") == 0) || (strcmp(dirp->d_name,"..") == 0))//过滤掉.和..
             continue;
-            
+         
         strcat(buf,dirp->d_name);
 //        printf("%d%s\n",size,buf);//在终端输出发送信息
         ++size;

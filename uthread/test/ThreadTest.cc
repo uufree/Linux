@@ -22,9 +22,11 @@ int main(int argc,char** argv)
 {
     int n = 5;
     thread::Thread thread(std::bind(&printInt,n));
-    thread.start();
+    thread::Thread thread_;
+    thread_ = thread;
+    thread_.start();
     
-    thread.join();
+    thread_.join();
     return 0;
 }
     
