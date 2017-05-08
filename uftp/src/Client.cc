@@ -68,9 +68,11 @@ int main(int argc,char** argv)
     
     if(argc >= 2)
     {
+        Value va;
         for(int i=2;i<argc;++i)
         {
-            sp.PushBack(static_cast<std::string>(argv[i]),allocater);
+            va.SetString(StringRef(argv[i]));
+            sp.PushBack(va,allocater);
             vec.push_back(argv[i]);
         }
     }     
