@@ -43,7 +43,7 @@ namespace unet
         { 
             int confd = socket::accept(listenfd);
             assert(confd >= 0);
-            socket::setNonBlockAndCloseOnExec(confd);
+//            socket::setNonBlockAndCloseOnExec(confd);
             
             Channel* channel = nullptr;
             if(newconnectioncallback)

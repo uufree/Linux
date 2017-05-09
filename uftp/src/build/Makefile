@@ -367,7 +367,6 @@ home/uuchen/git/uftp/TcpConnection.o: home/uuchen/git/uftp/TcpConnection.cc.o
 
 # target to build an object file
 home/uuchen/git/uftp/TcpConnection.cc.o:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/uuchen/git/uftp/TcpConnection.cc.o
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/uftp/TcpConnection.cc.o
 .PHONY : home/uuchen/git/uftp/TcpConnection.cc.o
 
@@ -377,7 +376,6 @@ home/uuchen/git/uftp/TcpConnection.i: home/uuchen/git/uftp/TcpConnection.cc.i
 
 # target to preprocess a source file
 home/uuchen/git/uftp/TcpConnection.cc.i:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/uuchen/git/uftp/TcpConnection.cc.i
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/uftp/TcpConnection.cc.i
 .PHONY : home/uuchen/git/uftp/TcpConnection.cc.i
 
@@ -387,7 +385,6 @@ home/uuchen/git/uftp/TcpConnection.s: home/uuchen/git/uftp/TcpConnection.cc.s
 
 # target to generate assembly for a file
 home/uuchen/git/uftp/TcpConnection.cc.s:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/uuchen/git/uftp/TcpConnection.cc.s
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/uftp/TcpConnection.cc.s
 .PHONY : home/uuchen/git/uftp/TcpConnection.cc.s
 

@@ -27,53 +27,63 @@ static unet::Directory dir("/home/uuchen/unet/");
 
 void readCallBack(Buffer* inputbuffer,Buffer* outputbuffer)
 {//服务端被动处理事务（适用于短连接）,只能在fd资源和内存资源中二选一
+
     char stream[1024];
-    outputbuffer->readInSocket();
-    outputbuffer->getCompleteMessageInBuffer(stream);
-    
-    Document docu;
-    docu.Parse(stream);
-    int type = docu["type"].GetInt();
-     
-    switch (type)
+    bzero(stream,1024);
+    if(outputbuffer->readInSocket() != 0)
     {
-        case LIST:
+        outputbuffer->getCompleteMessageInBuffer(stream);
+        
+        std::cout << "leave readInSocket." << std::endl;
+        
+        Document docu;
+        docu.Parse(stream);
+        int type = docu["type"].GetInt();
+     
+        switch (type)
         {
-            inputbuffer->appendInBuffer(dir.getDirBuffer());
-            inputbuffer->writeInSocket();
-            break;
-        }
-        case GET:
-        {
-            char path[64];
-            bzero(path,64);
-            strcat(path,"/home/uuchen/unet/");
-            Value& sp = docu["directory"];
-            for(unsigned int i=0;i<sp.Size();++i)
+            case LIST:
             {
-                if(dir.inDirectoryList(sp[i].GetString()))
-                {
-                    strcat(path,sp[i].GetString());
-                    inputbuffer->sendFile(path);
-                }
+                inputbuffer->appendInBuffer(dir.getDirBuffer());
+                inputbuffer->writeInSocket();
+                break;
             }
-            break;
-        }
-        case PUT:
-        {
-            char path[64];
-            bzero(path,64);
-            strcat(path,"/home/uuchen/unet/");
-            Value& sp = docu["directory"];
-            for(unsigned int i=0;i<sp.Size();++i)
+            case GET:
             {
-                if(!dir.inDirectoryList(sp[i].GetString()))
+                char path[64];
+                bzero(path,64);
+                Value& sp = docu["directory"];
+                for(unsigned int i=0;i<sp.Size();++i)
                 {
-                    strcat(path,sp[i].GetString());
-                    inputbuffer->recvFile(path);
+                    if(dir.inDirectoryList(sp[i].GetString()))
+                    {
+                        bzero(path,64);
+                        strcat(path,"/home/uuchen/unet/");
+                        strcat(path,sp[i].GetString());
+                        if(inputbuffer->sendFile(path) == 1)
+                            continue;
+                    }
                 }
+                break;
             }
-            break;
+            case PUT:
+            {
+                char path[64];
+                bzero(path,64);
+                strcat(path,"/home/uuchen/unet/");
+                Value& sp = docu["directory"];
+                
+                for(unsigned int i=0;i<sp.Size();++i)
+                {
+                    if(!dir.inDirectoryList(sp[i].GetString()))
+                    {
+                        strcat(path,sp[i].GetString());
+                        std::cout << path << std::endl;
+                        inputbuffer->recvFile(path);
+                    }
+                }
+                break;
+            }
         }
     }
 }
@@ -83,14 +93,14 @@ void writeCallBack(Buffer* inputbuffer,Buffer* outputbuffer)
 }
 
 void drivedCallBack(Buffer* inputbuffer,Buffer* outputbuffer)
-{//服务端主动发送文件，及时服务
+{
 }
 
 
 int main(int argc,char** argv)
 {
     InetAddress serveraddr(7777);
-    MutilTcpServer server(&serveraddr,1);
+    MutilTcpServer server(&serveraddr,2);
 
     server.setReadCallBack(std::bind(&readCallBack,std::placeholders::_1,std::placeholders::_2));
     server.setWriteCallBack(std::bind(&writeCallBack,std::placeholders::_1,std::placeholders::_2));

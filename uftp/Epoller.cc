@@ -40,7 +40,8 @@ namespace unet
             if(activeEvents > 0)
                 getActiveEvents(activeEvents,channels);
             else if(activeEvents == 0)
-                printf("%ld--nothing happended!\n",pthread_self());
+//                printf("%ld--nothing happended!\n",pthread_self());
+            ;
             else
             {
                 if(savedErrno != EINTR)

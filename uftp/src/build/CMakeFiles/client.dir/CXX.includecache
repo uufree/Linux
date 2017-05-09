@@ -128,10 +128,6 @@ fcntl.h
 unistd.h
 -
 
-/home/uuchen/git/uftp/TcpConnection.cc
-TcpConnection.h
-/home/uuchen/git/uftp/TcpConnection.h
-
 /home/uuchen/git/uftp/TcpConnection.h
 Typedef.h
 /home/uuchen/git/uftp/Typedef.h
@@ -396,5 +392,7 @@ SingleTcpClient.h
 vector
 -
 string
+-
+string.h
 -
 

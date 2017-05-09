@@ -3,7 +3,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/client.dir/home/uuchen/git/uftp/Buffer.cc.o"
   "CMakeFiles/client.dir/home/uuchen/git/uftp/File.cc.o"
   "CMakeFiles/client.dir/home/uuchen/git/uftp/Socket.cc.o"
-  "CMakeFiles/client.dir/home/uuchen/git/uftp/TcpConnection.cc.o"
   "CMakeFiles/client.dir/home/uuchen/git/uftp/singleClient/SingleTcpClient.cc.o"
   "client.pdb"
   "client"

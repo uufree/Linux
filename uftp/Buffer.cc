@@ -17,7 +17,6 @@ namespace unet
     {
         int Buffer::readInSocket()
         {
-            unet::thread::MutexLockGuard guard(lock);
             
             char extrabuf[65536];
             bzero(extrabuf,65536);
@@ -61,7 +60,6 @@ namespace unet
             
         void Buffer::writeInSocket()
         {
-            unet::thread::MutexLockGuard guard(lock);
             int n = ::write(fd,buffer+headindex,getDataSize());
 
             std::cout << "writeInSocket : " << n << std::endl;
@@ -85,7 +83,6 @@ namespace unet
         //通用操作
         void Buffer::appendInBuffer(const char* message)
         {
-            unet::thread::MutexLockGuard guard(lock);
             int size = strlen(message);
             if(size+2 > getFreeSize())
             {
@@ -108,7 +105,6 @@ namespace unet
         
         void Buffer::getCompleteMessageInBuffer(char* message)
         {
-            unet::thread::MutexLockGuard guard(lock);
             char* ch = strstr(buffer+headindex,"\r\n");
             
             if(ch != NULL)
@@ -183,8 +179,13 @@ namespace unet
                 n = uuchen.getReadSize();
                 tailindex += n;
                 
-                if(n > 0)
+                if(n > 0 && n == 1024)
                     writeInSocket();
+                else if(n > 0 && n != 1024)
+                {
+                    writeInSocket();
+                    return 1;
+                }
                 else if(n == 0)
                     return 1;
                 else
@@ -197,16 +198,23 @@ namespace unet
         {
             File chenuu(filename);
             int n;
+    
+            chenuu.writen(buffer+headindex,getDataSize());
+            bzero(buffer,strlen(buffer));
+            headindex = tailindex = 0; 
+            level = KBufferSize/2;
 
+            chenuu.writen(buffer+headindex,getDataSize());
             while(1)
             {
-                n = readInSocket(size);
+                n = readInSocket(size);//指望着sendFile先关闭
+                std::cout << "readInSocket: " << n << std::endl;
                 chenuu.writen(buffer+headindex,n);
                 headindex += n;
                   
-                if(n > 0)
+                if( n == 1024)
                     continue;
-                else if(n == 0)
+                else if(n >= 0 && n != 1024)
                 {
                     ::chmod(filename,S_IRUSR|S_IWUSR);
                     return 1;

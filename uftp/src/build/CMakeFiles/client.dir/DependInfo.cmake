@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/uuchen/git/uftp/Buffer.cc" "/home/uuchen/git/uftp/src/build/CMakeFiles/client.dir/home/uuchen/git/uftp/Buffer.cc.o"
   "/home/uuchen/git/uftp/File.cc" "/home/uuchen/git/uftp/src/build/CMakeFiles/client.dir/home/uuchen/git/uftp/File.cc.o"
   "/home/uuchen/git/uftp/Socket.cc" "/home/uuchen/git/uftp/src/build/CMakeFiles/client.dir/home/uuchen/git/uftp/Socket.cc.o"
-  "/home/uuchen/git/uftp/TcpConnection.cc" "/home/uuchen/git/uftp/src/build/CMakeFiles/client.dir/home/uuchen/git/uftp/TcpConnection.cc.o"
   "/home/uuchen/git/uftp/singleClient/SingleTcpClient.cc" "/home/uuchen/git/uftp/src/build/CMakeFiles/client.dir/home/uuchen/git/uftp/singleClient/SingleTcpClient.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -41,6 +41,7 @@ namespace unet
                 EventLoopThreadList threadlist;
                 EpollerList epollerlist;
                 EpollerListIter iter;
+                int position;
         };
     }
 }

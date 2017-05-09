@@ -29,6 +29,8 @@ namespace unet
                 void recvMessage(char* message);
                 void sendFile(const char* path);
                 void recvFile(const char* path);
+                int getConfd() const
+                {return confd;};
 
             private:
                 int confd;

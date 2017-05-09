@@ -12,7 +12,8 @@ namespace unet
     namespace thread
     {
         EventLoopThreadPool::EventLoopThreadPool(int size) :
-            threadsize(size)
+            threadsize(size),
+            position(0)
         {
             threads = new EventLoopThread[threadsize];
         }
@@ -41,13 +42,26 @@ namespace unet
 
         void EventLoopThreadPool::addInChannelMap(unet::net::Channel* channel)
         {
-            for(auto it=epollerlist.begin();it!=epollerlist.end();++it)              (*it)->getInfo();
+//            for(auto it=epollerlist.begin();it!=epollerlist.end();++it)              
+//                (*it)->getInfo();
             
-            (*iter)->addInChannelMap(channel);
-            if(iter != epollerlist.end())
-                ++iter;
-            
-            for(auto it=epollerlist.begin();it!=epollerlist.end();++it)              (*it)->getInfo();
+//            (*iter)->addInChannelMap(channel);
+//            if(iter != epollerlist.end())
+//                ++iter;
+           if(position != threadsize-1)
+           {
+               epollerlist[position]->addInChannelMap(channel);
+               ++position;
+           }
+           else
+           {
+
+               epollerlist[position]->addInChannelMap(channel);
+               position = 0;
+           }
+
+//            for(auto it=epollerlist.begin();it!=epollerlist.end();++it)              
+//                (*it)->getInfo();
             
         }
     }

@@ -143,7 +143,7 @@ namespace unet
         for(auto iter=directorylist.cbegin();iter!=directorylist.cend();++iter)
         {
             strcat(directorybuffer,iter->c_str());
-            strcat(directorybuffer,"\t");
+            strcat(directorybuffer,"\n");
         }
     }
 
@@ -152,7 +152,7 @@ namespace unet
         thread::MutexLockGuard guard(lock);
         directorylist.push_back(filename);
         strcat(directorybuffer,filename);
-        strcat(directorybuffer,"\t");
+        strcat(directorybuffer,"\n");
     }
     
     bool Directory::inDirectoryList(const char* filename)

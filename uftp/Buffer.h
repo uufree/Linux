@@ -27,7 +27,7 @@ namespace unet
             typedef std::function<void()> CloseCallBack;
 
             public:
-                explicit Buffer(int fd_) : buffer(nullptr),KBufferSize(1024),level(KBufferSize/2),headindex(0),tailindex(0),key(0),fd(fd_),lock()
+                explicit Buffer(int fd_) : buffer(nullptr),KBufferSize(1024),level(KBufferSize/2),headindex(0),tailindex(0),key(0),fd(fd_)
             {
                 buffer = static_cast<char*>(malloc(KBufferSize));
                 bzero(buffer,KBufferSize);
@@ -86,6 +86,9 @@ namespace unet
                 int getFd()
                 {return fd;};
                 
+                void useCloseCallBack()
+                {closecallback();};
+
                 void setHandleCloseCallBack(const CloseCallBack& cb)
                 {closecallback = cb;};
 
@@ -98,7 +101,6 @@ namespace unet
                 int key;
                 int fd;
                 CloseCallBack closecallback;
-                unet::thread::MutexLock lock;
         };        
     }
 }

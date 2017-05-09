@@ -49,14 +49,6 @@ CMakeFiles/client.dir/home/uuchen/git/uftp/Socket.cc.o
  /home/uuchen/git/uftp/InetAddress.h
  /home/uuchen/git/uftp/Socket.cc
  /home/uuchen/git/uftp/Socket.h
-CMakeFiles/client.dir/home/uuchen/git/uftp/TcpConnection.cc.o
- /home/uuchen/git/uftp/Buffer.h
- /home/uuchen/git/uftp/InetAddress.h
- /home/uuchen/git/uftp/Mutex.h
- /home/uuchen/git/uftp/Socket.h
- /home/uuchen/git/uftp/TcpConnection.cc
- /home/uuchen/git/uftp/TcpConnection.h
- /home/uuchen/git/uftp/Typedef.h
 CMakeFiles/client.dir/home/uuchen/git/uftp/singleClient/SingleTcpClient.cc.o
  /home/uuchen/git/uftp/Buffer.h
  /home/uuchen/git/uftp/Channel.h
