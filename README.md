@@ -1,2 +1,2 @@
 # Linux
-Linux环境下的C/C++小项目
+Linux环境下的代码整合仓库

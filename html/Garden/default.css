@@ -1,0 +1,19 @@
+/*怎么一次继承多个类？*/
+ul{list-style-type: square}
+ul ul{list-style-type: disc}
+ul ul ul{list-style-type: square}
+hr{color:red;background-color: red;height: 3px;}
+a: link {color: blue}
+a: visited {color: green}
+a: hover {color: lime}
+a: active {color: red}
+.family{font-family: "Verdana","Arial","Helvetical",sans-serif}/*字体设置*/
+.copyright{color: white; background-color: rgb(150,87,86); font-size: 15px;}/*末尾的行标记*/
+.bold{font-weight: bold;}/*粗体，用于span*/
+.title{font-family: "Verdana","Arial","Helvetical",sans-serif;font-weight: bold;}/*字体设置，粗体*/
+.lead{line-height: 1.25em}
+.image{float: left	;margin-bottom: 10px;}
+.img{border: none}
+aside{width: 400px;position: relative;left: 640px}
+nav{position: relative;position: absolute;width: 150px;top: 150px;left: 50px;}
+header{background-image: url(images/leaf-green.jpg);padding: 10px;color: white}

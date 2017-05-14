@@ -1,0 +1,10 @@
+*.o
+*.a
+*.pyc
+build/
+config.log
+.sconf_temp
+.sconsign.dblite
+/kernel/System
+.gdbinit
+/build*.conf

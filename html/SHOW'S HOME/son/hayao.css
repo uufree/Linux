@@ -1,0 +1,14 @@
+.family{font-family: "Verdana","Arial","Helvetical",sans-serif;}/*字体设置*/
+#list{position: absolute;top: 150px;left: 930px;border-style: solid;border-width: 1px;}
+#big{position: absolute;width: 1350px;height: 2000px;background-color: black;margin: 0px;border: 0px;}
+#small{position: absolute;left: 50px;top: 0.5%;}
+#small1{position: absolute;left: 430px;top: 90px}
+.gong{font-size: 3em;color: white;}
+.jun{font-size: 1em;color: white;}
+#qi{position: absolute;left: 750px;top: 60px;}
+#zh{position: absolute;left: 60px;top: 580px}
+#wan{position: absolute; left: 800px;top: 1060px}
+.h2{color: white;position: absolute;top: 1050px}
+#since{position: absolute;top: 1060px;left: 10px;width: 650px;padding: 25px;padding-top: none;padding-left: none;color: white;font-size: 1.1em}
+#young{position: absolute;top: 450px;width: 600px;left: 0px;padding: 25px;padding-top: none;color: white;font-size: 1.1em;line-height: 25px;}
+#zhong{position: absolute;top: 500px;width: 600px;left: 650px;padding: 25px;color: white;font-size: 1.1em;line-height: 25px;}

@@ -1,0 +1,24 @@
+.family{font-family: "Verdana","Arial","Helvetical",sans-serif;}/*字体设置*/
+.transparent{filter:alpha(opacity=50);-moz-opacity: 0.5;-khtml-opacity: 0.5;opacity: 0.5;}/*透明度*/
+#body{background-image: url(../image/大鱼海棠.jpg);background-repeat: no-repeat;height: 700px;background-size: 100%;}
+#block{position: absolute;top: 170px;right: 0px;padding-top: 40px;padding-bottom: 40px;padding-left: 20px;padding-right: 20px;
+	   height: 350px;width: 400px;background-color: rgb(0,0,0);}  
+#da{color: white;font-size: 50px;position: relative;top: 20px}
+#yu{color: white;font-size: 1.2em}
+
+#da1{position: absolute;top: 190px;left: 0px;padding-top: 40px;padding-bottom: 40px;padding-left: 20px;padding-right: 20px;
+	   height: 350px;width: 400px;background-color: rgb(0,0,0);} 
+#yu1{color: white;font-size: 50px;position: relative;top: 20px}
+#hai{color: white;font-size: 1.2em}	   
+
+#base{position: absolute;top: 743px;left: 0px;height: 690px;width: 100%;border: solid black 1px;background-image: url(../image/大鱼海棠2.jpg);
+	  background-repeat: no-repeat;background-size: 100%}
+#cb{position: absolute;top: 230px;left: 0px;padding-top: 40px;padding-bottom: 40px;padding-left: 20px;padding-right: 20px;
+	   height: 350px;width: 400px;background-color: rgb(0,0,0);} 
+#go{color: white;font-size: 50px;position: relative;top: 20px}
+#ng{color: white;font-size: 1.2em}
+
+#cb1{position: absolute;top: 100px;right: 0px;padding-top: 40px;padding-bottom: 40px;padding-left: 20px;padding-right: 20px;
+	   height: 350px;width: 400px;background-color: rgb(0,0,0);} 
+#go1{color: white;font-size: 50px;position: relative;top: 20px}
+#ng1{color: white;font-size: 1.2em;text-height: 1.1em}

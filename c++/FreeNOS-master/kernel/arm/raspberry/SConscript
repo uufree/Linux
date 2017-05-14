@@ -1,0 +1,83 @@
+#
+# Copyright (C) 2015 Niek Linnenbank
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+Import('build_env')
+
+env = build_env.Clone()
+
+for item in env['LINKUSER']:
+    env['LINKFLAGS'].remove(item)
+
+env.Append(LINKFLAGS = env['LINKKERN'])
+env.Append(CPPFLAGS = '-D__KERNEL__')
+
+env.UseLibraries(['liballoc', 'libstd', 'libarch', 'libipc'])
+env.UseServers(['core'])
+env.TargetProgram('kernel', [ Glob('*.S'),
+                              Glob('*.cpp'),
+                              Glob('#' + env['BUILDROOT'] + '/kernel/*.cpp'),
+                              Glob('#' + env['BUILDROOT'] + '/kernel/API/*.cpp'),
+                              Glob('#' + env['BUILDROOT'] + '/kernel/arm/*.cpp')
+                              ],
+                   env['boot'])
+
+#
+# Provide binary kernel image to overwrite kernel.img on the Raspbian SD card.
+#
+env.Command('kernel.img', 'kernel', env['CROSS_COMPILE'] + 'objcopy -O binary ' +
+            env['BUILDROOT'] + '/kernel/arm/' + env['SYSTEM'] + '/kernel ' +
+            env['BUILDROOT'] + '/kernel/arm/' + env['SYSTEM'] + '/kernel.img')
+
+#
+# Trick QEMU into thinking we provide a Linux kernel, such that it will
+# pass ATAGS bootloader information (similar to Multiboot for intel)
+#
+env.Command('vmlinux', 'kernel', 'cp ' +
+            env['BUILDROOT'] + '/kernel/arm/' + env['SYSTEM'] + '/kernel ' +
+            env['BUILDROOT'] + '/kernel/arm/' + env['SYSTEM'] + '/vmlinux')
+
+#
+# Qemu targets
+#
+env.Targets(qemu = 'qemu-system-arm -kernel ' + build_env['BUILDROOT'] +
+                   '/kernel/arm/raspberry/vmlinux -cpu arm1176 -M raspi -nographic ' +
+                   '-initrd ' + build_env['BUILDROOT'] + '/boot.img')
+
+env.Targets(qemu_usb = 'qemu-system-arm -kernel ' + build_env['BUILDROOT'] +
+                       '/kernel/arm/raspberry/vmlinux -cpu arm1176 -M raspi -nographic -usb -usbdevice disk:/tmp/disk.bin ' +
+                       '-initrd ' + build_env['BUILDROOT'] + '/boot.img')
+
+env.Targets(qemu_debug = 'qemu-system-arm -kernel ' + build_env['BUILDROOT'] +
+                         '/kernel/arm/raspberry/vmlinux -cpu arm1176 -M raspi -nographic -s -S ' +
+                         '-initrd ' + build_env['BUILDROOT'] + '/boot.img')
+
+env.Targets(qemu_debug2 = 'qemu-system-arm2 -kernel ' + build_env['BUILDROOT'] +
+                         '/kernel/arm/raspberry2/vmlinux -M raspi2 -nographic -s -S -cpu cortex-a8 ' +
+                         '-initrd ' + build_env['BUILDROOT'] + '/boot.img')
+
+env.Targets(qemu2 = 'qemu-system-arm2 -kernel ' + build_env['BUILDROOT'] +
+                    '/kernel/arm/raspberry2/vmlinux -M raspi2 -nographic -cpu cortex-a8 ' +
+                    '-initrd ' + build_env['BUILDROOT'] + '/boot.img')
+
+
+env.Targets(qemu_debugs = 'qemu-system-arm -kernel ' + build_env['BUILDROOT'] +
+                          '/kernel/arm/raspberry/vmlinux -cpu arm1176 -M raspi -nographic -s -S -d int,cpu_reset ' +
+                          '-initrd ' + build_env['BUILDROOT'] + '/boot.img')
+
+env.AutoTester(qemu_test = 'qemu-system-arm -kernel ' + build_env['BUILDROOT'] +
+                           '/kernel/arm/raspberry/vmlinux -cpu arm1176 -M raspi -nographic ' +
+                           '-initrd ' + build_env['BUILDROOT'] + '/boot.img')
