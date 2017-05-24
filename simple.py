@@ -178,6 +178,7 @@ class LearningSwitch (object):
     tcpp = None
     udpp = None
 
+#从这块开始解析packet
     infoStr = "TCP 10.0.0.3 80"
     infoList = infoStr.split(' ')
      
@@ -208,7 +209,7 @@ class LearningSwitch (object):
             if(strUdpp.split(' ')[1].split('>')[1] == clientPort[1] and listIp[1].split('>')[0] == clientAddr and listIp[1].split('>')[1] == serverAddr):
                 drop()
                 return
-        
+#解析完毕        
 
 class l2_learning (object):
   """
