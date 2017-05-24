@@ -13,7 +13,7 @@
 template<typename T>
 class LinkedBinaryTree : public BinaryTree<T>
 {
-    typedef std::function<void(T*)> CallBack;
+    typedef std::function<void(BinaryTreeNode<T>*)> CallBack;
 
     public:
         LinkedBinaryTree();
@@ -61,10 +61,10 @@ class LinkedBinaryTree : public BinaryTree<T>
         void theInOrder(BinaryTreeNode<T>* ptr);
         void thePostOrder(BinaryTreeNode<T>* ptr);
         void theLevelOrder(BinaryTreeNode<T>* ptr);
-
-        void visit(const T& lhs)
-        {std::cout << lhs << std::endl;}
-
+        BinaryTreeNode<T>* theCopy(BinaryTreeNode<T>* ptr);
+        
+        void visit(const BinaryTreeNode<T>& lhs)
+        {std::cout << lhs->data << std::endl;}
 
     private:
         BinaryTreeNode<T>* boot;
