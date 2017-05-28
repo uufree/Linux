@@ -1,4 +1,0 @@
-/home/uuchen/git/uftp/src/build/CMakeFiles/rebuild_cache.dir
-/home/uuchen/git/uftp/src/build/CMakeFiles/edit_cache.dir
-/home/uuchen/git/uftp/src/build/CMakeFiles/client.dir
-/home/uuchen/git/uftp/src/build/CMakeFiles/server.dir
