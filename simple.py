@@ -87,7 +87,8 @@ class LearningSwitch (object):
 
     # We just use this to know when to log a helpful message 
     self.hold_down_expired = _flood_delay == 0
-
+    
+    infoStr = row_input("Please input drop infomation: ")
     #log.debug("Initializing LearningSwitch, transparent=%s",
     #          str(self.transparent))
   
@@ -179,7 +180,6 @@ class LearningSwitch (object):
     udpp = None
 
 #从这块开始解析packet
-    infoStr = "TCP 10.0.0.3 80"
     infoList = infoStr.split(' ')
      
     protocol = infoList[0]
