@@ -99,6 +99,8 @@ namespace serial
             perror("Open fd error!\n");
             exit(1);
         }
+        
+        setOption(9600,1,0,1);
     }
 
     void SerialPort::setOption(int nSpeed,int nBits,int nEvent,int nStop)
