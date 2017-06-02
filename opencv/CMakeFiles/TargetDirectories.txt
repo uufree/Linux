@@ -1,0 +1,3 @@
+/home/uuchen/git/opencv/CMakeFiles/rebuild_cache.dir
+/home/uuchen/git/opencv/CMakeFiles/edit_cache.dir
+/home/uuchen/git/opencv/CMakeFiles/a.dir
