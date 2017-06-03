@@ -6,7 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/uuchen/git/magicMirror/circle.cc
+/home/uuchen/git/magicMirror/Clock.cc
+Clock.h
+/home/uuchen/git/magicMirror/Clock.h
+time.h
+-
+iostream
+-
+
+/home/uuchen/git/magicMirror/Clock.h
+string
+-
+vector
+-
+utility
+-
+
+/home/uuchen/git/magicMirror/main.cc
 iostream
 -
 vector
@@ -17,6 +33,8 @@ unistd.h
 -
 opencv2/opencv.hpp
 -
+Clock.h
+/home/uuchen/git/magicMirror/Clock.h
 
 /usr/local/include/opencv/cxcore.h
 opencv2/core/core_c.h

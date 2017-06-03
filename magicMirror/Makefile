@@ -123,32 +123,59 @@ a/fast:
 	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/build
 .PHONY : a/fast
 
-circle.o: circle.cc.o
+Clock.o: Clock.cc.o
 
-.PHONY : circle.o
+.PHONY : Clock.o
 
 # target to build an object file
-circle.cc.o:
-	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/circle.cc.o
-.PHONY : circle.cc.o
+Clock.cc.o:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/Clock.cc.o
+.PHONY : Clock.cc.o
 
-circle.i: circle.cc.i
+Clock.i: Clock.cc.i
 
-.PHONY : circle.i
+.PHONY : Clock.i
 
 # target to preprocess a source file
-circle.cc.i:
-	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/circle.cc.i
-.PHONY : circle.cc.i
+Clock.cc.i:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/Clock.cc.i
+.PHONY : Clock.cc.i
 
-circle.s: circle.cc.s
+Clock.s: Clock.cc.s
 
-.PHONY : circle.s
+.PHONY : Clock.s
 
 # target to generate assembly for a file
-circle.cc.s:
-	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/circle.cc.s
-.PHONY : circle.cc.s
+Clock.cc.s:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/Clock.cc.s
+.PHONY : Clock.cc.s
+
+main.o: main.cc.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cc.o:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/main.cc.o
+.PHONY : main.cc.o
+
+main.i: main.cc.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cc.i:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/main.cc.i
+.PHONY : main.cc.i
+
+main.s: main.cc.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cc.s:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/main.cc.s
+.PHONY : main.cc.s
 
 # Help Target
 help:
@@ -159,9 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... a"
-	@echo "... circle.o"
-	@echo "... circle.i"
-	@echo "... circle.s"
+	@echo "... Clock.o"
+	@echo "... Clock.i"
+	@echo "... Clock.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/uuchen/git/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3d71a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3d71a.dir/build.make CMakeFiles/cmTC_3d71a.dir/build
+make[1]: Entering directory '/home/uuchen/git/opencv/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3d71a.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -fPIC    -o CMakeFiles/cmTC_3d71a.dir/CheckSymbolExists.c.o   -c /home/uuchen/git/opencv/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_3d71a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3d71a.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC     CMakeFiles/cmTC_3d71a.dir/CheckSymbolExists.c.o  -o cmTC_3d71a -rdynamic 
+CMakeFiles/cmTC_3d71a.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x1b)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_3d71a.dir/build.make:97: recipe for target 'cmTC_3d71a' failed
+make[1]: *** [cmTC_3d71a] Error 1
+make[1]: Leaving directory '/home/uuchen/git/opencv/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_3d71a/fast' failed
+make: *** [cmTC_3d71a/fast] Error 2
+
+File /home/uuchen/git/opencv/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/uuchen/git/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_18e41/fast"
+/usr/bin/make -f CMakeFiles/cmTC_18e41.dir/build.make CMakeFiles/cmTC_18e41.dir/build
+make[1]: Entering directory '/home/uuchen/git/opencv/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_18e41.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_18e41.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_18e41
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_18e41.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_18e41.dir/CheckFunctionExists.c.o  -o cmTC_18e41 -rdynamic -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_18e41.dir/build.make:97: recipe for target 'cmTC_18e41' failed
+make[1]: *** [cmTC_18e41] Error 1
+make[1]: Leaving directory '/home/uuchen/git/opencv/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_18e41/fast' failed
+make: *** [cmTC_18e41/fast] Error 2
+
+

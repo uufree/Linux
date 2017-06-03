@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/a.dir/circle.cc.o"
+  "CMakeFiles/a.dir/main.cc.o"
+  "CMakeFiles/a.dir/Clock.cc.o"
   "a.pdb"
   "a"
 )

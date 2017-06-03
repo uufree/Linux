@@ -57,38 +57,64 @@ include CMakeFiles/a.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/a.dir/flags.make
 
-CMakeFiles/a.dir/circle.cc.o: CMakeFiles/a.dir/flags.make
-CMakeFiles/a.dir/circle.cc.o: circle.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uuchen/git/magicMirror/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/a.dir/circle.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a.dir/circle.cc.o -c /home/uuchen/git/magicMirror/circle.cc
+CMakeFiles/a.dir/main.cc.o: CMakeFiles/a.dir/flags.make
+CMakeFiles/a.dir/main.cc.o: main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uuchen/git/magicMirror/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/a.dir/main.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a.dir/main.cc.o -c /home/uuchen/git/magicMirror/main.cc
 
-CMakeFiles/a.dir/circle.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.dir/circle.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uuchen/git/magicMirror/circle.cc > CMakeFiles/a.dir/circle.cc.i
+CMakeFiles/a.dir/main.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.dir/main.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uuchen/git/magicMirror/main.cc > CMakeFiles/a.dir/main.cc.i
 
-CMakeFiles/a.dir/circle.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.dir/circle.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uuchen/git/magicMirror/circle.cc -o CMakeFiles/a.dir/circle.cc.s
+CMakeFiles/a.dir/main.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.dir/main.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uuchen/git/magicMirror/main.cc -o CMakeFiles/a.dir/main.cc.s
 
-CMakeFiles/a.dir/circle.cc.o.requires:
+CMakeFiles/a.dir/main.cc.o.requires:
 
-.PHONY : CMakeFiles/a.dir/circle.cc.o.requires
+.PHONY : CMakeFiles/a.dir/main.cc.o.requires
 
-CMakeFiles/a.dir/circle.cc.o.provides: CMakeFiles/a.dir/circle.cc.o.requires
-	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/circle.cc.o.provides.build
-.PHONY : CMakeFiles/a.dir/circle.cc.o.provides
+CMakeFiles/a.dir/main.cc.o.provides: CMakeFiles/a.dir/main.cc.o.requires
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/main.cc.o.provides.build
+.PHONY : CMakeFiles/a.dir/main.cc.o.provides
 
-CMakeFiles/a.dir/circle.cc.o.provides.build: CMakeFiles/a.dir/circle.cc.o
+CMakeFiles/a.dir/main.cc.o.provides.build: CMakeFiles/a.dir/main.cc.o
+
+
+CMakeFiles/a.dir/Clock.cc.o: CMakeFiles/a.dir/flags.make
+CMakeFiles/a.dir/Clock.cc.o: Clock.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uuchen/git/magicMirror/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/a.dir/Clock.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a.dir/Clock.cc.o -c /home/uuchen/git/magicMirror/Clock.cc
+
+CMakeFiles/a.dir/Clock.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.dir/Clock.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uuchen/git/magicMirror/Clock.cc > CMakeFiles/a.dir/Clock.cc.i
+
+CMakeFiles/a.dir/Clock.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.dir/Clock.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uuchen/git/magicMirror/Clock.cc -o CMakeFiles/a.dir/Clock.cc.s
+
+CMakeFiles/a.dir/Clock.cc.o.requires:
+
+.PHONY : CMakeFiles/a.dir/Clock.cc.o.requires
+
+CMakeFiles/a.dir/Clock.cc.o.provides: CMakeFiles/a.dir/Clock.cc.o.requires
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/Clock.cc.o.provides.build
+.PHONY : CMakeFiles/a.dir/Clock.cc.o.provides
+
+CMakeFiles/a.dir/Clock.cc.o.provides.build: CMakeFiles/a.dir/Clock.cc.o
 
 
 # Object files for target a
 a_OBJECTS = \
-"CMakeFiles/a.dir/circle.cc.o"
+"CMakeFiles/a.dir/main.cc.o" \
+"CMakeFiles/a.dir/Clock.cc.o"
 
 # External object files for target a
 a_EXTERNAL_OBJECTS =
 
-a : CMakeFiles/a.dir/circle.cc.o
+a : CMakeFiles/a.dir/main.cc.o
+a : CMakeFiles/a.dir/Clock.cc.o
 a : CMakeFiles/a.dir/build.make
 a : /usr/local/lib/libopencv_cudabgsegm.so.3.2.0
 a : /usr/local/lib/libopencv_cudaobjdetect.so.3.2.0
@@ -119,7 +145,7 @@ a : /usr/local/lib/libopencv_imgproc.so.3.2.0
 a : /usr/local/lib/libopencv_core.so.3.2.0
 a : /usr/local/lib/libopencv_cudev.so.3.2.0
 a : CMakeFiles/a.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/uuchen/git/magicMirror/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/uuchen/git/magicMirror/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable a"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/a.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -127,7 +153,8 @@ CMakeFiles/a.dir/build: a
 
 .PHONY : CMakeFiles/a.dir/build
 
-CMakeFiles/a.dir/requires: CMakeFiles/a.dir/circle.cc.o.requires
+CMakeFiles/a.dir/requires: CMakeFiles/a.dir/main.cc.o.requires
+CMakeFiles/a.dir/requires: CMakeFiles/a.dir/Clock.cc.o.requires
 
 .PHONY : CMakeFiles/a.dir/requires
 

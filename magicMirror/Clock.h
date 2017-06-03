@@ -9,39 +9,42 @@
 #define _CLOCK_H
 
 #include<string>
+#include<vector>
+#include<utility>
 
 namespace utime
 {
-    class Clock final
+    class UClock final
     {
-        friend Clock& operator+(const Clock& lhs,const Clock& rhs);
-        friend Clock& operator-(const Clock& lhs,const Clock& rhs);
-        friend bool operator==(const Clock& lhs,const Clock& rhs);
+        friend bool operator==(const UClock& lhs,const UClock& rhs);
         
         public:
-            explicit Clock();
-            explicit Clock(const Clock& lhs);
-            explicit Clock(Clock&& lhs);
-            Clock& operator=(const Clock& lhs);
-            Clock& operator=(Clock&& lhs);
-            ~Clock();
+            explicit UClock(){};
+            UClock(const UClock& lhs);
+            UClock(UClock&& lhs);
+            UClock& operator=(const UClock& lhs);
+            UClock& operator=(UClock&& lhs);
+            ~UClock(){};
             
-            void swap();
+            void swap(UClock& lhs);
 
-            const std::string& getHourAndMinutes() const;
-            const std::string& getMouthAndDays() const;
-            const std::string& getWeek() const;
-            const std::string& getYear() const;
+            const std::string& getHourAndMinutes() const
+            {return hourAndMinutes;}
+
+            const std::string& getMouthAndDays() const
+            {return mouthAndDays;}
+        
+            void update();
         
         private:
-            void update();
+            void split(const std::string& lhs,const std::string& rhs,std::vector<std::string>& vecStr);
 
         private:
             std::string hourAndMinutes;
             std::string mouthAndDays;
-            std::string week;
-            std::string year;
+            std::vector<std::string> strList;
     };
+
 }
 
 
