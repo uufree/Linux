@@ -57,38 +57,38 @@ include CMakeFiles/a.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/a.dir/flags.make
 
-CMakeFiles/a.dir/addWidget.cc.o: CMakeFiles/a.dir/flags.make
-CMakeFiles/a.dir/addWidget.cc.o: addWidget.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uuchen/git/opencv/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/a.dir/addWidget.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a.dir/addWidget.cc.o -c /home/uuchen/git/opencv/addWidget.cc
+CMakeFiles/a.dir/circle.cc.o: CMakeFiles/a.dir/flags.make
+CMakeFiles/a.dir/circle.cc.o: circle.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uuchen/git/opencv/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/a.dir/circle.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/a.dir/circle.cc.o -c /home/uuchen/git/opencv/circle.cc
 
-CMakeFiles/a.dir/addWidget.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.dir/addWidget.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uuchen/git/opencv/addWidget.cc > CMakeFiles/a.dir/addWidget.cc.i
+CMakeFiles/a.dir/circle.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.dir/circle.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uuchen/git/opencv/circle.cc > CMakeFiles/a.dir/circle.cc.i
 
-CMakeFiles/a.dir/addWidget.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.dir/addWidget.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uuchen/git/opencv/addWidget.cc -o CMakeFiles/a.dir/addWidget.cc.s
+CMakeFiles/a.dir/circle.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.dir/circle.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uuchen/git/opencv/circle.cc -o CMakeFiles/a.dir/circle.cc.s
 
-CMakeFiles/a.dir/addWidget.cc.o.requires:
+CMakeFiles/a.dir/circle.cc.o.requires:
 
-.PHONY : CMakeFiles/a.dir/addWidget.cc.o.requires
+.PHONY : CMakeFiles/a.dir/circle.cc.o.requires
 
-CMakeFiles/a.dir/addWidget.cc.o.provides: CMakeFiles/a.dir/addWidget.cc.o.requires
-	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/addWidget.cc.o.provides.build
-.PHONY : CMakeFiles/a.dir/addWidget.cc.o.provides
+CMakeFiles/a.dir/circle.cc.o.provides: CMakeFiles/a.dir/circle.cc.o.requires
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/circle.cc.o.provides.build
+.PHONY : CMakeFiles/a.dir/circle.cc.o.provides
 
-CMakeFiles/a.dir/addWidget.cc.o.provides.build: CMakeFiles/a.dir/addWidget.cc.o
+CMakeFiles/a.dir/circle.cc.o.provides.build: CMakeFiles/a.dir/circle.cc.o
 
 
 # Object files for target a
 a_OBJECTS = \
-"CMakeFiles/a.dir/addWidget.cc.o"
+"CMakeFiles/a.dir/circle.cc.o"
 
 # External object files for target a
 a_EXTERNAL_OBJECTS =
 
-a : CMakeFiles/a.dir/addWidget.cc.o
+a : CMakeFiles/a.dir/circle.cc.o
 a : CMakeFiles/a.dir/build.make
 a : /usr/local/lib/libopencv_cudabgsegm.so.3.2.0
 a : /usr/local/lib/libopencv_cudaobjdetect.so.3.2.0
@@ -127,7 +127,7 @@ CMakeFiles/a.dir/build: a
 
 .PHONY : CMakeFiles/a.dir/build
 
-CMakeFiles/a.dir/requires: CMakeFiles/a.dir/addWidget.cc.o.requires
+CMakeFiles/a.dir/requires: CMakeFiles/a.dir/circle.cc.o.requires
 
 .PHONY : CMakeFiles/a.dir/requires
 

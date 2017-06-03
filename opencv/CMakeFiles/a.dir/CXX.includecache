@@ -6,8 +6,14 @@
 
 #IncludeRegexTransform: 
 
-/home/uuchen/git/opencv/addWidget.cc
+/home/uuchen/git/opencv/circle.cc
 iostream
+-
+vector
+-
+utility
+-
+unistd.h
 -
 opencv2/opencv.hpp
 -

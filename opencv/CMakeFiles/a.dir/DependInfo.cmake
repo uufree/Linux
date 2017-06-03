@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/uuchen/git/opencv/addWidget.cc" "/home/uuchen/git/opencv/CMakeFiles/a.dir/addWidget.cc.o"
+  "/home/uuchen/git/opencv/circle.cc" "/home/uuchen/git/opencv/CMakeFiles/a.dir/circle.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

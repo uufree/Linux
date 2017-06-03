@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/uuchen/git/magicMirror/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f51c5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f51c5.dir/build.make CMakeFiles/cmTC_f51c5.dir/build
+make[1]: Entering directory '/home/uuchen/git/magicMirror/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f51c5.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -fPIC    -o CMakeFiles/cmTC_f51c5.dir/CheckSymbolExists.c.o   -c /home/uuchen/git/magicMirror/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_f51c5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f51c5.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC     CMakeFiles/cmTC_f51c5.dir/CheckSymbolExists.c.o  -o cmTC_f51c5 -rdynamic 
+CMakeFiles/cmTC_f51c5.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x1b)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f51c5.dir/build.make:97: recipe for target 'cmTC_f51c5' failed
+make[1]: *** [cmTC_f51c5] Error 1
+make[1]: Leaving directory '/home/uuchen/git/magicMirror/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f51c5/fast' failed
+make: *** [cmTC_f51c5/fast] Error 2
+
+File /home/uuchen/git/magicMirror/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/uuchen/git/magicMirror/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_780fe/fast"
+/usr/bin/make -f CMakeFiles/cmTC_780fe.dir/build.make CMakeFiles/cmTC_780fe.dir/build
+make[1]: Entering directory '/home/uuchen/git/magicMirror/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_780fe.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_780fe.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_780fe
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_780fe.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_780fe.dir/CheckFunctionExists.c.o  -o cmTC_780fe -rdynamic -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_780fe.dir/build.make:97: recipe for target 'cmTC_780fe' failed
+make[1]: *** [cmTC_780fe] Error 1
+make[1]: Leaving directory '/home/uuchen/git/magicMirror/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_780fe/fast' failed
+make: *** [cmTC_780fe/fast] Error 2
+
+

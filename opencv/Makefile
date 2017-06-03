@@ -123,32 +123,32 @@ a/fast:
 	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/build
 .PHONY : a/fast
 
-addWidget.o: addWidget.cc.o
+circle.o: circle.cc.o
 
-.PHONY : addWidget.o
+.PHONY : circle.o
 
 # target to build an object file
-addWidget.cc.o:
-	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/addWidget.cc.o
-.PHONY : addWidget.cc.o
+circle.cc.o:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/circle.cc.o
+.PHONY : circle.cc.o
 
-addWidget.i: addWidget.cc.i
+circle.i: circle.cc.i
 
-.PHONY : addWidget.i
+.PHONY : circle.i
 
 # target to preprocess a source file
-addWidget.cc.i:
-	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/addWidget.cc.i
-.PHONY : addWidget.cc.i
+circle.cc.i:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/circle.cc.i
+.PHONY : circle.cc.i
 
-addWidget.s: addWidget.cc.s
+circle.s: circle.cc.s
 
-.PHONY : addWidget.s
+.PHONY : circle.s
 
 # target to generate assembly for a file
-addWidget.cc.s:
-	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/addWidget.cc.s
-.PHONY : addWidget.cc.s
+circle.cc.s:
+	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/circle.cc.s
+.PHONY : circle.cc.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... a"
-	@echo "... addWidget.o"
-	@echo "... addWidget.i"
-	@echo "... addWidget.s"
+	@echo "... circle.o"
+	@echo "... circle.i"
+	@echo "... circle.s"
 .PHONY : help
 
 
