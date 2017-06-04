@@ -57,7 +57,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/uuchen/git/magicMirror
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/uuchen/git/magicMirror
+CMAKE_BINARY_DIR = /home/uuchen/git/magicMirror/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/a.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/uuchen/git/magicMirror
 CMakeFiles/a.dir/all:
 	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/depend
 	$(MAKE) -f CMakeFiles/a.dir/build.make CMakeFiles/a.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uuchen/git/magicMirror/CMakeFiles --progress-num=1,2,3 "Built target a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uuchen/git/magicMirror/build/CMakeFiles --progress-num=1,2,3 "Built target a"
 .PHONY : CMakeFiles/a.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/a.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/a.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uuchen/git/magicMirror/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uuchen/git/magicMirror/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/a.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uuchen/git/magicMirror/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uuchen/git/magicMirror/build/CMakeFiles 0
 .PHONY : CMakeFiles/a.dir/rule
 
 # Convenience name for target.

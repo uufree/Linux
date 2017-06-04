@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/uuchen/git/magicMirror/Clock.cc" "/home/uuchen/git/magicMirror/CMakeFiles/a.dir/Clock.cc.o"
-  "/home/uuchen/git/magicMirror/main.cc" "/home/uuchen/git/magicMirror/CMakeFiles/a.dir/main.cc.o"
+  "/home/uuchen/git/magicMirror/Clock.cc" "/home/uuchen/git/magicMirror/build/CMakeFiles/a.dir/Clock.cc.o"
+  "/home/uuchen/git/magicMirror/main.cc" "/home/uuchen/git/magicMirror/build/CMakeFiles/a.dir/main.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

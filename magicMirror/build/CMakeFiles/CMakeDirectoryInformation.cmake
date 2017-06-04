@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/uuchen/git/magicMirror")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/uuchen/git/magicMirror")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/uuchen/git/magicMirror/build")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)
