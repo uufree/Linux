@@ -33,6 +33,15 @@ void readCallBack(Buffer* inputbuffer,Buffer* outputbuffer)
     if(outputbuffer->readInSocket() != 0)
     {
         outputbuffer->getCompleteMessageInBuffer(stream);
+        std::cout << stream << std::endl;
+    }
+      
+/*
+    char stream[1024];
+    bzero(stream,1024);
+    if(outputbuffer->readInSocket() != 0)
+    {
+        outputbuffer->getCompleteMessageInBuffer(stream);
         
         std::cout << "leave readInSocket." << std::endl;
         
@@ -86,6 +95,7 @@ void readCallBack(Buffer* inputbuffer,Buffer* outputbuffer)
             }
         }
     }
+*/
 }
 
 void writeCallBack(Buffer* inputbuffer,Buffer* outputbuffer)

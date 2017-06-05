@@ -54,7 +54,7 @@ namespace unet
             {
                 sockaddr_in addr_ = addr->getSockaddr();
                 int n = ::connect(sockfd,(sockaddr*)(&addr_),static_cast<socklen_t>(sizeof(struct sockaddr_in)));
-                    
+                std::cout << "socket: " << n << std::endl;        
                 return n;
             }
 

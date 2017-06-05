@@ -25,13 +25,21 @@ using namespace rapidjson;
 
 int main(int argc,char** argv)
 {
-    InetAddress addr("127.0.0.1",7777);
+    InetAddress addr("120.25.0.40",7777);
     SingleTcpClient client;//主动处理事件的能力发生在client对象的构建过程中。server对象可以，但是client不行
-    std::vector<std::string> vec;
+    std::vector<std::string> vec; 
+    client.connect(&addr);
+    
+    while(1)
+    {
+        client.sendMessage("hello,server!");
+        sleep(1);
+    }
+
+/*    
     TranslateType type;  
     
 
-    client.connect(&addr);
     const char* json = "{\"type\":0,\"directory\":[]}";
 
     Document docu;
@@ -147,6 +155,6 @@ int main(int argc,char** argv)
             break;
         }
     }
-    
+*/    
     return 0;
 }
