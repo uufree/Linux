@@ -6,22 +6,14 @@
  ************************************************************************/
 
 #include"../singleClient/SingleTcpClient.h"
-#include"../rapidjson/document.h"
-#include"../rapidjson/writer.h"
-#include"../rapidjson/stringbuffer.h"
-#include<vector>
-#include<string>
 #include<string.h>
 #include<unistd.h>
 #include<sys/ioctl.h>
 #include<stdlib.h>
 
-enum TranslateType{LIST,GET,PUT};
-
 using namespace unet;
 using namespace unet::thread;
 using namespace unet::net;
-using namespace rapidjson;
 
 int kbhit()
 {
@@ -32,10 +24,10 @@ int kbhit()
 
 int main(int argc,char** argv)
 {
-    InetAddress addr("120.25.0.40",7777);
+    InetAddress addr("127.0.0.1",7777);
     SingleTcpClient client;//主动处理事件的能力发生在client对象的构建过程中。server对象可以，但是client不行
     client.connect(&addr);
-     
+/*     
     system("stty raw -echo");
     
     char c = ' '; 
@@ -45,11 +37,19 @@ int main(int argc,char** argv)
         if(kbhit())
         {
             c = std::cin.get();
-            std::cout << c << std::endl;
-            client.sendMessage(&c);
+            std::cout << c;
+            client.sendMessage(&c,1);
         }
     }
     system("stty cooked echo");
+*/
 
+    for(int i=0;i<5;++i)
+    {
+        client.sendMessage("hello,world",11);
+        sleep(1);
+    }
+    
+    std::cout << "leave circle!" << std::endl;
     return 0;
 }

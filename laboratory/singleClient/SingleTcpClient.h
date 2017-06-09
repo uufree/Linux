@@ -25,7 +25,7 @@ namespace unet
                 ~SingleTcpClient();
 
                 void connect(InetAddress* addr_);
-                void sendMessage(const char* message);
+                void sendMessage(const char* message,int size);
                 void recvMessage(char* message);
                 void sendFile(const char* path);
                 void recvFile(const char* path);

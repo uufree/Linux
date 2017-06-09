@@ -15,13 +15,13 @@ namespace unet
         const int Channel::KWriteEvent = POLLOUT;
         
         Channel::Channel(int fd_,ChannelType type_) : 
-        fd(fd_),
-        event(0),
-        revent(0),
-        handleeventing(false),
-        tcpconnectionptr(new TcpConnection(fd_)),
-        tcpconnectionwptr(tcpconnectionptr),
-        type(type_)
+            fd(fd_),
+            event(0),
+            revent(0),
+            handleeventing(false),
+            tcpconnectionptr(new TcpConnection(fd_)),
+            tcpconnectionwptr(tcpconnectionptr),
+            type(type_)
         {
             tcpconnectionptr->setWheetChannelCallBack(std::bind(&Channel::disableAll,this));
 
@@ -30,7 +30,7 @@ namespace unet
                 tcpconnectionptr.reset();
                 tcpconnectionwptr.reset();   
             }
-            type = type_;
+//            type = type_;
         };
 
         Channel::~Channel()

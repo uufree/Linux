@@ -63,9 +63,14 @@ namespace unet
         void MutilTcpServer::handleDiedTcpConnection(int fd)
         {
             thread::MutexLockGuard guard(mutex);
+            
+            std::cout << "tcpconnectionptrmap size: " << tcpconnectionptrmap.size() << std::endl;
+            
             tcpconnectionptrmap[fd]->handleChannel();
             tcpconnectionptrmap[fd].reset();
             tcpconnectionptrmap.erase(fd);
+            
+            std::cout << "tcpconnectionptrmap size: " << tcpconnectionptrmap.size() << std::endl;
         };
     }
 }

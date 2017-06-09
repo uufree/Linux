@@ -74,6 +74,7 @@ namespace unet
                 MessageCallBack readcallback, writecallback,drivedcallback;
                 HandleDiedTcpConnection handlediedtcpconnection;
                 WheetChannelCallBack wheetchannel;
+                bool inused;
         };
     }
 }

@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/client.dir/Client.cc.o CMakeFiles/client.dir/home/uuchen/git/laboratory/Buffer.cc.o CMakeFiles/client.dir/home/uuchen/git/laboratory/File.cc.o CMakeFiles/client.dir/home/uuchen/git/laboratory/Socket.cc.o CMakeFiles/client.dir/home/uuchen/git/laboratory/singleClient/SingleTcpClient.cc.o  -o client -rdynamic -lpthread 

@@ -14,7 +14,8 @@ namespace unet
         TcpConnection::TcpConnection(int fd_) : 
             confd(fd_),
             outputbuffer(fd_),
-            inputbuffer(fd_)
+            inputbuffer(fd_),
+            inused(true)
         {
             outputbuffer.setHandleCloseCallBack(std::bind(&TcpConnection::handleClose,this));
             inputbuffer.setHandleCloseCallBack(std::bind(&TcpConnection::handleClose,this));
@@ -23,7 +24,7 @@ namespace unet
 //if inputbuffer over highwater,handle it and put it in outputbuffer,otherwize,update inputbuffer and outputbuffer
         void TcpConnection::handleRead()
         {//处理读事件   
-            if(readcallback)
+            if(readcallback && inused)
                 readcallback(&inputbuffer,&outputbuffer);
             else
                 perror("没有注册readcallback\n");
@@ -31,7 +32,7 @@ namespace unet
 
         void TcpConnection::handleWrite()
         {//处理写事件
-            if(writecallback)
+            if(writecallback && inused)
                 writecallback(&inputbuffer,&outputbuffer);
             else
                 perror("没有注册writecallback");
@@ -51,13 +52,22 @@ namespace unet
         
         void TcpConnection::handleClose()
         {   
-            if(handlediedtcpconnection)
+            if(handlediedtcpconnection && inused)
             {
+                inused = false;
                 handlediedtcpconnection(confd.getFd());
             }
+            else if(handlediedtcpconnection && !inused)
+            {
+//                char buf[64];
+//                ::read(confd.getFd(),buf,64);
+//                printf("loop忙碌！");
+//                std::cout << "fd: " << confd.getFd() << std::endl;
+            }
             else
+            {
                 perror("没有注册handlediedtcpconnection\n");
-
+            }
         }
 
         void TcpConnection::handleChannel()
@@ -70,7 +80,7 @@ namespace unet
         
         void TcpConnection::handleDrived()
         {
-            if(drivedcallback)
+            if(drivedcallback && inused)
             {
                 drivedcallback(&inputbuffer,&outputbuffer);
             }

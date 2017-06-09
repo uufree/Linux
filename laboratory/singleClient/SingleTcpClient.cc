@@ -30,9 +30,9 @@ namespace unet
             outputbuffer.setFd(confd);
         }
         
-        void SingleTcpClient::sendMessage(const char* message)
+        void SingleTcpClient::sendMessage(const char* message,int size)
         {
-            inputbuffer.appendInBuffer(message);
+            inputbuffer.appendInBuffer(message,size);
             inputbuffer.writeInSocket();
         }
 

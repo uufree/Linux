@@ -46,7 +46,7 @@ namespace unet
                 void writeInSocket();
                 
                 //通用操作
-                void appendInBuffer(const char* message);
+                void appendInBuffer(const char* message,int size);
                 void getCompleteMessageInBuffer(char* message);
                 
                 //针对File

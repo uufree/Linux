@@ -27,6 +27,7 @@ namespace unet
             vec[1].iov_len = 65536;
             
             int n = ::readv(fd,vec,getFreeSize());
+            printf("confd: %d\n",fd);
             printf("readv n: %d\n",n);
 
             if(n < 0)
@@ -81,9 +82,8 @@ namespace unet
         }
 
         //通用操作
-        void Buffer::appendInBuffer(const char* message)
+        void Buffer::appendInBuffer(const char* message,int size)
         {
-            int size = strlen(message);
             if(size+2 > getFreeSize())
             {
                 while(size+2 > getFreeSize())

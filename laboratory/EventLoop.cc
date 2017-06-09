@@ -22,6 +22,7 @@ namespace unet
             quit = false;
             while(!quit)
             {
+                
                 activechannels.clear();
                     
                 if(activecallback)
