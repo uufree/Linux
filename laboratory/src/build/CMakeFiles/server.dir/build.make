@@ -297,124 +297,52 @@ CMakeFiles/server.dir/home/uuchen/git/laboratory/ThreadPool.cc.o.provides: CMake
 CMakeFiles/server.dir/home/uuchen/git/laboratory/ThreadPool.cc.o.provides.build: CMakeFiles/server.dir/home/uuchen/git/laboratory/ThreadPool.cc.o
 
 
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.o: /home/uuchen/git/laboratory/mutilServer/Current.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uuchen/git/laboratory/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.o -c /home/uuchen/git/laboratory/mutilServer/Current.cc
+CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.o: /home/uuchen/git/laboratory/singleServer/Acceptor.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uuchen/git/laboratory/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.o -c /home/uuchen/git/laboratory/singleServer/Acceptor.cc
 
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uuchen/git/laboratory/mutilServer/Current.cc > CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.i
+CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uuchen/git/laboratory/singleServer/Acceptor.cc > CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.i
 
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uuchen/git/laboratory/mutilServer/Current.cc -o CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.s
+CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uuchen/git/laboratory/singleServer/Acceptor.cc -o CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.s
 
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.o.requires:
+CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.o.requires:
 
-.PHONY : CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.o.requires
+.PHONY : CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.o.requires
 
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.o.provides: CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.o.requires
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.o.provides.build
-.PHONY : CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.o.provides
+CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.o.provides: CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.o.provides.build
+.PHONY : CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.o.provides
 
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.o.provides.build: CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.o
-
-
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.o: /home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uuchen/git/laboratory/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.o -c /home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc
-
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc > CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.i
-
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc -o CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.s
-
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.o.requires:
-
-.PHONY : CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.o.requires
-
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.o.provides: CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.o.requires
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.o.provides.build
-.PHONY : CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.o.provides
-
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.o.provides.build: CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.o
+CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.o.provides.build: CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.o
 
 
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.o: /home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uuchen/git/laboratory/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.o -c /home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc
+CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.o: /home/uuchen/git/laboratory/singleServer/TcpServer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uuchen/git/laboratory/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.o -c /home/uuchen/git/laboratory/singleServer/TcpServer.cc
 
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc > CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.i
+CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uuchen/git/laboratory/singleServer/TcpServer.cc > CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.i
 
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc -o CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.s
+CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uuchen/git/laboratory/singleServer/TcpServer.cc -o CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.s
 
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.o.requires:
+CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.o.requires:
 
-.PHONY : CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.o.requires
+.PHONY : CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.o.requires
 
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.o.provides: CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.o.requires
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.o.provides.build
-.PHONY : CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.o.provides
+CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.o.provides: CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.o.provides.build
+.PHONY : CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.o.provides
 
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.o.provides.build: CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.o
-
-
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.o: /home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uuchen/git/laboratory/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.o -c /home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc
-
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc > CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.i
-
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc -o CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.s
-
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.o.requires:
-
-.PHONY : CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.o.requires
-
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.o.provides: CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.o.requires
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.o.provides.build
-.PHONY : CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.o.provides
-
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.o.provides.build: CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.o
-
-
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.o: /home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uuchen/git/laboratory/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.o -c /home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc
-
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc > CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.i
-
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc -o CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.s
-
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.o.requires:
-
-.PHONY : CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.o.requires
-
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.o.provides: CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.o.requires
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.o.provides.build
-.PHONY : CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.o.provides
-
-CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.o.provides.build: CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.o
+CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.o.provides.build: CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.o
 
 
 # Object files for target server
@@ -429,11 +357,8 @@ server_OBJECTS = \
 "CMakeFiles/server.dir/home/uuchen/git/laboratory/TcpConnection.cc.o" \
 "CMakeFiles/server.dir/home/uuchen/git/laboratory/Thread.cc.o" \
 "CMakeFiles/server.dir/home/uuchen/git/laboratory/ThreadPool.cc.o" \
-"CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.o" \
-"CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.o" \
-"CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.o" \
-"CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.o" \
-"CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.o"
+"CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.o" \
+"CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.o"
 
 # External object files for target server
 server_EXTERNAL_OBJECTS =
@@ -448,14 +373,11 @@ server: CMakeFiles/server.dir/home/uuchen/git/laboratory/Socket.cc.o
 server: CMakeFiles/server.dir/home/uuchen/git/laboratory/TcpConnection.cc.o
 server: CMakeFiles/server.dir/home/uuchen/git/laboratory/Thread.cc.o
 server: CMakeFiles/server.dir/home/uuchen/git/laboratory/ThreadPool.cc.o
-server: CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.o
-server: CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.o
-server: CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.o
-server: CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.o
-server: CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.o
+server: CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.o
+server: CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.o
 server: CMakeFiles/server.dir/build.make
 server: CMakeFiles/server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/uuchen/git/laboratory/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/uuchen/git/laboratory/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -473,11 +395,8 @@ CMakeFiles/server.dir/requires: CMakeFiles/server.dir/home/uuchen/git/laboratory
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/home/uuchen/git/laboratory/TcpConnection.cc.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/home/uuchen/git/laboratory/Thread.cc.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/home/uuchen/git/laboratory/ThreadPool.cc.o.requires
-CMakeFiles/server.dir/requires: CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.o.requires
-CMakeFiles/server.dir/requires: CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.o.requires
-CMakeFiles/server.dir/requires: CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.o.requires
-CMakeFiles/server.dir/requires: CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.o.requires
-CMakeFiles/server.dir/requires: CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.o.requires
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.o.requires
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.o.requires
 
 .PHONY : CMakeFiles/server.dir/requires
 

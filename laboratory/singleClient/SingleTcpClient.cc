@@ -6,15 +6,12 @@
  ************************************************************************/
 
 #include"SingleTcpClient.h"
-#include"../Buffer.h"
-
-enum TransType{LIST,GET,PUT};
 
 namespace unet
 {
     namespace net
     {   
-        SingleTcpClient::SingleTcpClient() : inputbuffer(0),outputbuffer(0)
+        SingleTcpClient::SingleTcpClient()
         {};
 
         SingleTcpClient::~SingleTcpClient()
@@ -26,30 +23,25 @@ namespace unet
         {
             confd = socket::socket();
             socket::connect(confd,addr_); 
-            inputbuffer.setFd(confd);
-            outputbuffer.setFd(confd);
+            
+            int m = 1;
+            int n = ::setsockopt(confd,IPPROTO_TCP,TCP_NODELAY,&m,static_cast<socklen_t>(sizeof(int)));
+            
+            if(n < 0)
+            {
+                std::cerr << "setsockopt error" << std::endl;
+                exit(1);
+            }
         }
         
-        void SingleTcpClient::sendMessage(const char* message,int size)
+        void SingleTcpClient::sendMessage(const char& message)
         {
-            inputbuffer.appendInBuffer(message,size);
-            inputbuffer.writeInSocket();
+            ::send(confd,&message,1,0);
         }
 
-        void SingleTcpClient::recvMessage(char* message)
+        void SingleTcpClient::recvMessage(char& message)
         {
-            outputbuffer.readInSocket();
-            outputbuffer.getCompleteMessageInBuffer(message);
-        }
-
-        void SingleTcpClient::sendFile(const char* path)
-        {
-            inputbuffer.sendFile(path);
-        }
-
-        void SingleTcpClient::recvFile(const char* path)
-        {
-            outputbuffer.recvFile(path);
+            ::recv(confd,&message,1,0);
         }
     }
 }

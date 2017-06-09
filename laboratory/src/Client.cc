@@ -43,10 +43,11 @@ int main(int argc,char** argv)
     }
     system("stty cooked echo");
 */
-
+    
+    char ch = 'j';
     for(int i=0;i<5;++i)
     {
-        client.sendMessage("hello,world",11);
+        client.sendMessage(ch);
         sleep(1);
     }
     

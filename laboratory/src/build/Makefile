@@ -442,141 +442,6 @@ home/uuchen/git/laboratory/ThreadPool.cc.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/ThreadPool.cc.s
 .PHONY : home/uuchen/git/laboratory/ThreadPool.cc.s
 
-home/uuchen/git/laboratory/mutilServer/Current.o: home/uuchen/git/laboratory/mutilServer/Current.cc.o
-
-.PHONY : home/uuchen/git/laboratory/mutilServer/Current.o
-
-# target to build an object file
-home/uuchen/git/laboratory/mutilServer/Current.cc.o:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.o
-.PHONY : home/uuchen/git/laboratory/mutilServer/Current.cc.o
-
-home/uuchen/git/laboratory/mutilServer/Current.i: home/uuchen/git/laboratory/mutilServer/Current.cc.i
-
-.PHONY : home/uuchen/git/laboratory/mutilServer/Current.i
-
-# target to preprocess a source file
-home/uuchen/git/laboratory/mutilServer/Current.cc.i:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.i
-.PHONY : home/uuchen/git/laboratory/mutilServer/Current.cc.i
-
-home/uuchen/git/laboratory/mutilServer/Current.s: home/uuchen/git/laboratory/mutilServer/Current.cc.s
-
-.PHONY : home/uuchen/git/laboratory/mutilServer/Current.s
-
-# target to generate assembly for a file
-home/uuchen/git/laboratory/mutilServer/Current.cc.s:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.s
-.PHONY : home/uuchen/git/laboratory/mutilServer/Current.cc.s
-
-home/uuchen/git/laboratory/mutilServer/EventLoopThread.o: home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.o
-
-.PHONY : home/uuchen/git/laboratory/mutilServer/EventLoopThread.o
-
-# target to build an object file
-home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.o:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.o
-.PHONY : home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.o
-
-home/uuchen/git/laboratory/mutilServer/EventLoopThread.i: home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.i
-
-.PHONY : home/uuchen/git/laboratory/mutilServer/EventLoopThread.i
-
-# target to preprocess a source file
-home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.i:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.i
-.PHONY : home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.i
-
-home/uuchen/git/laboratory/mutilServer/EventLoopThread.s: home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.s
-
-.PHONY : home/uuchen/git/laboratory/mutilServer/EventLoopThread.s
-
-# target to generate assembly for a file
-home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.s:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.s
-.PHONY : home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.s
-
-home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.o: home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.o
-
-.PHONY : home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.o
-
-# target to build an object file
-home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.o:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.o
-.PHONY : home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.o
-
-home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.i: home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.i
-
-.PHONY : home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.i
-
-# target to preprocess a source file
-home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.i:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.i
-.PHONY : home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.i
-
-home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.s: home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.s
-
-.PHONY : home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.s
-
-# target to generate assembly for a file
-home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.s:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.s
-.PHONY : home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.s
-
-home/uuchen/git/laboratory/mutilServer/MutilAcceptor.o: home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.o
-
-.PHONY : home/uuchen/git/laboratory/mutilServer/MutilAcceptor.o
-
-# target to build an object file
-home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.o:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.o
-.PHONY : home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.o
-
-home/uuchen/git/laboratory/mutilServer/MutilAcceptor.i: home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.i
-
-.PHONY : home/uuchen/git/laboratory/mutilServer/MutilAcceptor.i
-
-# target to preprocess a source file
-home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.i:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.i
-.PHONY : home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.i
-
-home/uuchen/git/laboratory/mutilServer/MutilAcceptor.s: home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.s
-
-.PHONY : home/uuchen/git/laboratory/mutilServer/MutilAcceptor.s
-
-# target to generate assembly for a file
-home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.s:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.s
-.PHONY : home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.s
-
-home/uuchen/git/laboratory/mutilServer/MutilTcpServer.o: home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.o
-
-.PHONY : home/uuchen/git/laboratory/mutilServer/MutilTcpServer.o
-
-# target to build an object file
-home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.o:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.o
-.PHONY : home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.o
-
-home/uuchen/git/laboratory/mutilServer/MutilTcpServer.i: home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.i
-
-.PHONY : home/uuchen/git/laboratory/mutilServer/MutilTcpServer.i
-
-# target to preprocess a source file
-home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.i:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.i
-.PHONY : home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.i
-
-home/uuchen/git/laboratory/mutilServer/MutilTcpServer.s: home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.s
-
-.PHONY : home/uuchen/git/laboratory/mutilServer/MutilTcpServer.s
-
-# target to generate assembly for a file
-home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.s:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.s
-.PHONY : home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.s
-
 home/uuchen/git/laboratory/singleClient/SingleTcpClient.o: home/uuchen/git/laboratory/singleClient/SingleTcpClient.cc.o
 
 .PHONY : home/uuchen/git/laboratory/singleClient/SingleTcpClient.o
@@ -603,6 +468,60 @@ home/uuchen/git/laboratory/singleClient/SingleTcpClient.s: home/uuchen/git/labor
 home/uuchen/git/laboratory/singleClient/SingleTcpClient.cc.s:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/uuchen/git/laboratory/singleClient/SingleTcpClient.cc.s
 .PHONY : home/uuchen/git/laboratory/singleClient/SingleTcpClient.cc.s
+
+home/uuchen/git/laboratory/singleServer/Acceptor.o: home/uuchen/git/laboratory/singleServer/Acceptor.cc.o
+
+.PHONY : home/uuchen/git/laboratory/singleServer/Acceptor.o
+
+# target to build an object file
+home/uuchen/git/laboratory/singleServer/Acceptor.cc.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.o
+.PHONY : home/uuchen/git/laboratory/singleServer/Acceptor.cc.o
+
+home/uuchen/git/laboratory/singleServer/Acceptor.i: home/uuchen/git/laboratory/singleServer/Acceptor.cc.i
+
+.PHONY : home/uuchen/git/laboratory/singleServer/Acceptor.i
+
+# target to preprocess a source file
+home/uuchen/git/laboratory/singleServer/Acceptor.cc.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.i
+.PHONY : home/uuchen/git/laboratory/singleServer/Acceptor.cc.i
+
+home/uuchen/git/laboratory/singleServer/Acceptor.s: home/uuchen/git/laboratory/singleServer/Acceptor.cc.s
+
+.PHONY : home/uuchen/git/laboratory/singleServer/Acceptor.s
+
+# target to generate assembly for a file
+home/uuchen/git/laboratory/singleServer/Acceptor.cc.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.s
+.PHONY : home/uuchen/git/laboratory/singleServer/Acceptor.cc.s
+
+home/uuchen/git/laboratory/singleServer/TcpServer.o: home/uuchen/git/laboratory/singleServer/TcpServer.cc.o
+
+.PHONY : home/uuchen/git/laboratory/singleServer/TcpServer.o
+
+# target to build an object file
+home/uuchen/git/laboratory/singleServer/TcpServer.cc.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.o
+.PHONY : home/uuchen/git/laboratory/singleServer/TcpServer.cc.o
+
+home/uuchen/git/laboratory/singleServer/TcpServer.i: home/uuchen/git/laboratory/singleServer/TcpServer.cc.i
+
+.PHONY : home/uuchen/git/laboratory/singleServer/TcpServer.i
+
+# target to preprocess a source file
+home/uuchen/git/laboratory/singleServer/TcpServer.cc.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.i
+.PHONY : home/uuchen/git/laboratory/singleServer/TcpServer.cc.i
+
+home/uuchen/git/laboratory/singleServer/TcpServer.s: home/uuchen/git/laboratory/singleServer/TcpServer.cc.s
+
+.PHONY : home/uuchen/git/laboratory/singleServer/TcpServer.s
+
+# target to generate assembly for a file
+home/uuchen/git/laboratory/singleServer/TcpServer.cc.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.s
+.PHONY : home/uuchen/git/laboratory/singleServer/TcpServer.cc.s
 
 # Help Target
 help:
@@ -647,24 +566,15 @@ help:
 	@echo "... home/uuchen/git/laboratory/ThreadPool.o"
 	@echo "... home/uuchen/git/laboratory/ThreadPool.i"
 	@echo "... home/uuchen/git/laboratory/ThreadPool.s"
-	@echo "... home/uuchen/git/laboratory/mutilServer/Current.o"
-	@echo "... home/uuchen/git/laboratory/mutilServer/Current.i"
-	@echo "... home/uuchen/git/laboratory/mutilServer/Current.s"
-	@echo "... home/uuchen/git/laboratory/mutilServer/EventLoopThread.o"
-	@echo "... home/uuchen/git/laboratory/mutilServer/EventLoopThread.i"
-	@echo "... home/uuchen/git/laboratory/mutilServer/EventLoopThread.s"
-	@echo "... home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.o"
-	@echo "... home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.i"
-	@echo "... home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.s"
-	@echo "... home/uuchen/git/laboratory/mutilServer/MutilAcceptor.o"
-	@echo "... home/uuchen/git/laboratory/mutilServer/MutilAcceptor.i"
-	@echo "... home/uuchen/git/laboratory/mutilServer/MutilAcceptor.s"
-	@echo "... home/uuchen/git/laboratory/mutilServer/MutilTcpServer.o"
-	@echo "... home/uuchen/git/laboratory/mutilServer/MutilTcpServer.i"
-	@echo "... home/uuchen/git/laboratory/mutilServer/MutilTcpServer.s"
 	@echo "... home/uuchen/git/laboratory/singleClient/SingleTcpClient.o"
 	@echo "... home/uuchen/git/laboratory/singleClient/SingleTcpClient.i"
 	@echo "... home/uuchen/git/laboratory/singleClient/SingleTcpClient.s"
+	@echo "... home/uuchen/git/laboratory/singleServer/Acceptor.o"
+	@echo "... home/uuchen/git/laboratory/singleServer/Acceptor.i"
+	@echo "... home/uuchen/git/laboratory/singleServer/Acceptor.s"
+	@echo "... home/uuchen/git/laboratory/singleServer/TcpServer.o"
+	@echo "... home/uuchen/git/laboratory/singleServer/TcpServer.i"
+	@echo "... home/uuchen/git/laboratory/singleServer/TcpServer.s"
 .PHONY : help
 
 

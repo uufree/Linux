@@ -208,53 +208,31 @@ iostream
 string.h
 -
 
-/home/uuchen/git/laboratory/mutilServer/Current.cc
-Current.h
-/home/uuchen/git/laboratory/mutilServer/Current.h
+/home/uuchen/git/laboratory/singleServer/Acceptor.cc
+Acceptor.h
+/home/uuchen/git/laboratory/singleServer/Acceptor.h
 
-/home/uuchen/git/laboratory/mutilServer/Current.h
+/home/uuchen/git/laboratory/singleServer/Acceptor.h
 ../Epoller.h
 /home/uuchen/git/laboratory/Epoller.h
 ../EventLoop.h
 /home/uuchen/git/laboratory/EventLoop.h
 
-/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc
-EventLoopThread.h
-/home/uuchen/git/laboratory/mutilServer/EventLoopThread.h
+/home/uuchen/git/laboratory/singleServer/TcpServer.cc
+TcpServer.h
+/home/uuchen/git/laboratory/singleServer/TcpServer.h
 
-/home/uuchen/git/laboratory/mutilServer/EventLoopThread.h
-../Thread.h
-/home/uuchen/git/laboratory/Thread.h
-Current.h
-/home/uuchen/git/laboratory/mutilServer/Current.h
-
-/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc
-EventLoopThreadPool.h
-/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.h
-
-/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.h
-EventLoopThread.h
-/home/uuchen/git/laboratory/mutilServer/EventLoopThread.h
-
-/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc
-MutilAcceptor.h
-/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.h
-
-/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.h
-EventLoopThreadPool.h
-/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.h
-
-/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc
-MutilTcpServer.h
-/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.h
-
-/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.h
-MutilAcceptor.h
-/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.h
+/home/uuchen/git/laboratory/singleServer/TcpServer.h
+assert.h
+-
+algorithm
+-
+Acceptor.h
+/home/uuchen/git/laboratory/singleServer/Acceptor.h
+array
+-
 
 /home/uuchen/git/laboratory/src/Server.cc
-../mutilServer/MutilTcpServer.h
-/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.h
-../File.h
-/home/uuchen/git/laboratory/File.h
+../singleServer/TcpServer.h
+/home/uuchen/git/laboratory/singleServer/TcpServer.h
 

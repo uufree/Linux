@@ -163,8 +163,6 @@ string.h
 /home/uuchen/git/laboratory/singleClient/SingleTcpClient.cc
 SingleTcpClient.h
 /home/uuchen/git/laboratory/singleClient/SingleTcpClient.h
-../Buffer.h
-/home/uuchen/git/laboratory/Buffer.h
 
 /home/uuchen/git/laboratory/singleClient/SingleTcpClient.h
 ../Epoller.h

@@ -9,11 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/server.dir/home/uuchen/git/laboratory/TcpConnection.cc.o"
   "CMakeFiles/server.dir/home/uuchen/git/laboratory/Thread.cc.o"
   "CMakeFiles/server.dir/home/uuchen/git/laboratory/ThreadPool.cc.o"
-  "CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.o"
-  "CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.o"
-  "CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.o"
-  "CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.o"
-  "CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.o"
+  "CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.o"
+  "CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.o"
   "server.pdb"
   "server"
 )

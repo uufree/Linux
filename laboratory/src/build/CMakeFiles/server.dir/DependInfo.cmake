@@ -14,11 +14,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/uuchen/git/laboratory/TcpConnection.cc" "/home/uuchen/git/laboratory/src/build/CMakeFiles/server.dir/home/uuchen/git/laboratory/TcpConnection.cc.o"
   "/home/uuchen/git/laboratory/Thread.cc" "/home/uuchen/git/laboratory/src/build/CMakeFiles/server.dir/home/uuchen/git/laboratory/Thread.cc.o"
   "/home/uuchen/git/laboratory/ThreadPool.cc" "/home/uuchen/git/laboratory/src/build/CMakeFiles/server.dir/home/uuchen/git/laboratory/ThreadPool.cc.o"
-  "/home/uuchen/git/laboratory/mutilServer/Current.cc" "/home/uuchen/git/laboratory/src/build/CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/Current.cc.o"
-  "/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc" "/home/uuchen/git/laboratory/src/build/CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThread.cc.o"
-  "/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc" "/home/uuchen/git/laboratory/src/build/CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/EventLoopThreadPool.cc.o"
-  "/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc" "/home/uuchen/git/laboratory/src/build/CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilAcceptor.cc.o"
-  "/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc" "/home/uuchen/git/laboratory/src/build/CMakeFiles/server.dir/home/uuchen/git/laboratory/mutilServer/MutilTcpServer.cc.o"
+  "/home/uuchen/git/laboratory/singleServer/Acceptor.cc" "/home/uuchen/git/laboratory/src/build/CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/Acceptor.cc.o"
+  "/home/uuchen/git/laboratory/singleServer/TcpServer.cc" "/home/uuchen/git/laboratory/src/build/CMakeFiles/server.dir/home/uuchen/git/laboratory/singleServer/TcpServer.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

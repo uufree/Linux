@@ -21,21 +21,18 @@ namespace unet
             public:
                 SingleTcpClient();
                 SingleTcpClient(const SingleTcpClient& lhs) = delete;
-                SingleTcpClient& operator=(const SingleTcpClient& lsh);
+                SingleTcpClient& operator=(const SingleTcpClient& lsh) = delete;
                 ~SingleTcpClient();
 
                 void connect(InetAddress* addr_);
-                void sendMessage(const char* message,int size);
-                void recvMessage(char* message);
-                void sendFile(const char* path);
-                void recvFile(const char* path);
+                void sendMessage(const char& message);
+                void recvMessage(char& message);
+                
                 int getConfd() const
                 {return confd;};
 
             private:
                 int confd;
-                Buffer inputbuffer;
-                Buffer outputbuffer;
         };
     }
 }
