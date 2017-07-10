@@ -27,7 +27,7 @@ static unet::Directory dir("/home/uuchen/unet/");
 
 void readCallBack(Buffer* inputbuffer,Buffer* outputbuffer)
 {//服务端被动处理事务（适用于短连接）,只能在fd资源和内存资源中二选一
-
+/*
     char stream[1024];
     bzero(stream,1024);
     if(outputbuffer->readInSocket() != 0)
@@ -36,7 +36,7 @@ void readCallBack(Buffer* inputbuffer,Buffer* outputbuffer)
         std::cout << stream << std::endl;
     }
       
-/*
+*/
     char stream[1024];
     bzero(stream,1024);
     if(outputbuffer->readInSocket() != 0)
@@ -95,7 +95,6 @@ void readCallBack(Buffer* inputbuffer,Buffer* outputbuffer)
             }
         }
     }
-*/
 }
 
 void writeCallBack(Buffer* inputbuffer,Buffer* outputbuffer)
