@@ -420,7 +420,7 @@ load_relocate_program:                      ;加载并重定位用户程序
          div ecx
          mov ecx,eax                        ;总扇区数 
       
-         mov eax,mem_0_4_gb_seg_sel         ;切换DS到0-4GB的段
+         mov eax,mem_0_4_gb_seg_sel         ;4GB的段-切换DS到0
          mov ds,eax
 
          mov eax,esi                        ;起始扇区号 
