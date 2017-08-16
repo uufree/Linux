@@ -10,20 +10,20 @@
 #include<vector>
 #include<time.h>
 
-    void split(const std::string& lhs,const std::string& rhs,std::vector<std::string>& vecStr)
+void split(const std::string& lhs,const std::string& rhs,std::vector<std::string>& vecStr)
+{
+    size_t last = 0;
+    size_t index = lhs.find_first_of(rhs,last);
+    while(index != std::string::npos)
     {
-        size_t last = 0;
-        size_t index = lhs.find_first_of(rhs,last);
-        while(index != std::string::npos)
-        {
-            vecStr.push_back(lhs.substr(last,index-last));
-            last = index + 1;
-            index = lhs.find_first_of(rhs,last);
-        }
-
-        if((index-last) > 0)
-            vecStr.push_back(lhs.substr(last,index-last));
+        vecStr.push_back(lhs.substr(last,index-last));
+        last = index + 1;
+        index = lhs.find_first_of(rhs,last);
     }
+
+    if((index-last) > 0)
+        vecStr.push_back(lhs.substr(last,index-last));
+}
 
 int main(int argc,char** argv)
 {
