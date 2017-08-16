@@ -52,6 +52,7 @@ namespace unet
         {
             if(!isstart)
             {
+                std::cout << "thread start~" << std::endl;
                  assert(::pthread_create(&threadid,NULL,runInThread,&threadfunc) == 0);
                  isstart = true;
             }

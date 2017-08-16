@@ -6,6 +6,7 @@
  ************************************************************************/
 
 #include"EventLoop.h"
+#include<iostream>
 
 namespace unet
 {
@@ -50,7 +51,10 @@ namespace unet
             }
 
             while(!quit)
+            {
+                std::cout << "~~" << std::endl;
                 getActiveChannelsCallBack();
+            }
         }
     }
 }

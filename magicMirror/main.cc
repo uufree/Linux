@@ -31,5 +31,6 @@ int main(int argc,char** argv)
         waitKey(999);
         img.setTo(Scalar(0,0,0));
     }
+
     return 0;
 }

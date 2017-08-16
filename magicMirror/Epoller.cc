@@ -6,6 +6,7 @@
  ************************************************************************/
 
 #include"Epoller.h"
+#include<iostream>
 
 namespace unet
 {
@@ -42,7 +43,7 @@ namespace unet
         {
             eventList.clear();
             int activeEvents = ::epoll_wait(epollfd,&*eventList.begin(),65536,-1);
-             
+
             if(activeEvents > 0)
                 getActiveEvents(activeEvents,channelMap);
             else if(activeEvents == 0)
