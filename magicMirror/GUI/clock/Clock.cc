@@ -59,10 +59,16 @@ namespace utime
     {
         time_t time_ = time(NULL);
         std::string strTime = ctime(&time_);
-
+        
         split(strTime," ",strList);
-        hourAndMinutes = strList[4];
-        mouthAndDays = strList[0] + "," + strList[1] + " " + strList[3] + "th";
+/*
+        std::cout << "strList[0]" << strList[0] << std::endl;
+        std::cout << "strList[1]" << strList[1] << std::endl;
+        std::cout << "strList[2]" << strList[2] << std::endl;
+        std::cout << "strList[3]" << strList[3] << std::endl;
+*/
+        hourAndMinutes = strList[3];
+        mouthAndDays = strList[0] + "," + strList[1] + " " + strList[2] + "th";
     };
     
     void UClock::swap(UClock& lhs)

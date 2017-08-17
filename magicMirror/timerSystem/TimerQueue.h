@@ -10,8 +10,8 @@
 
 #include"Timer.h"
 #include"Timestamp.h"
-#include"Channel.h"
-#include"Mutex.h"
+#include"../unetComponent/Channel.h"
+#include"../unetComponent/Mutex.h"
 
 #include<map>
 #include<sys/timerfd.h>

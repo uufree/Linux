@@ -60,8 +60,8 @@ namespace unet
 
         void TimerEventSystem::start()
         {
-//            thread.start();
-            ThreadStart();              
+            thread.start();
+//            ThreadStart();              
         }
 
         void TimerEventSystem::stop()
