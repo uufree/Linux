@@ -48,7 +48,7 @@ namespace unet
                 getActiveEvents(activeEvents,channelMap);
             else if(activeEvents == 0)
             {
-                std::cout << "activeEvents == 0" << std::endl;
+
             }
             else
             {

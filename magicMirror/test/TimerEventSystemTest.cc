@@ -18,7 +18,7 @@ int main(int argc,char** argv)
 {
     unet::net::TimerEventSystem system;
     
-    unet::time::TimerPtr timer(new unet::time::Timer(true,2));
+    unet::time::TimerPtr timer(new unet::time::Timer(true,1));
     timer->setTimeCallBack(std::bind(&timeReadCallBack));
     system.addTimer(std::move(timer));
     

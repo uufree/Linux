@@ -13,7 +13,7 @@
 #include"Thread.h"
 #include"Epoller.h"
 #include"EventLoop.h"
-
+#include"EventMap.h"
 
 namespace unet
 {
@@ -41,7 +41,8 @@ namespace unet
 
             private:
                 ChannelMap channelMap;                
-                
+                EventMap eventMap;
+
                 Epoller epoller;
                 EventLoop eventLoop;
                 time::TimerQueue timerQueue;

@@ -52,7 +52,6 @@ namespace unet
 
             while(!quit)
             {
-                std::cout << "~~" << std::endl;
                 getActiveChannelsCallBack();
             }
         }

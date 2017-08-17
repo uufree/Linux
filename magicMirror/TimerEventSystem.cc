@@ -13,6 +13,7 @@ namespace unet
     {
         TimerEventSystem::TimerEventSystem() :
             channelMap(),
+            eventMap(),
             epoller(),
             eventLoop(),
             timerQueue(),
@@ -28,6 +29,7 @@ namespace unet
 
         TimerEventSystem::TimerEventSystem(TimerEventSystem&& lhs) :
             channelMap(std::move(lhs.channelMap)),
+            eventMap(std::move(lhs.eventMap)),
             epoller(std::move(lhs.epoller)),
             eventLoop(std::move(lhs.eventLoop)),
             timerQueue(std::move(lhs.timerQueue)),
@@ -44,6 +46,7 @@ namespace unet
         TimerEventSystem& TimerEventSystem::operator=(TimerEventSystem&& lhs)
         {
             channelMap = std::move(lhs.channelMap);
+            eventMap = std::move(lhs.eventMap);
             epoller = std::move(lhs.epoller);
             eventLoop = std::move(lhs.eventLoop);
             timerQueue = std::move(lhs.timerQueue);
@@ -76,11 +79,13 @@ namespace unet
         {
             channel->setCloseCallBack(std::bind(&TimerEventSystem::EraseChannel,this,std::placeholders::_1));
             channelMap.insert(std::move(channel));
+            eventMap.insert(channel->getFd(),channel->getEvent(),epoller.getEpollfd());
         }
 
         void TimerEventSystem::EraseChannel(int index)
         {
             channelMap.erase(index);
+            eventMap.erase(index,epoller.getEpollfd());
         }
 
         void TimerEventSystem::GetActiveChannels()
