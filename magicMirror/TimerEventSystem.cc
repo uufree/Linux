@@ -83,9 +83,7 @@ namespace unet
 
         void TimerEventSystem::GetActiveChannels()
         {
-            std::cout << "~~~" << std::endl;
             epoller.epoll(channelMap);
-            std::cout << "~~~~" << std::endl;
         }
         
         void TimerEventSystem::ThreadStart()

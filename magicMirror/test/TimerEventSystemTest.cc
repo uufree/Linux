@@ -22,9 +22,7 @@ int main(int argc,char** argv)
     timer->setTimeCallBack(std::bind(&timeReadCallBack));
     system.addTimer(std::move(timer));
     
-    std::cout << "Main system already start~" << std::endl;
     system.start();
-    std::cout << "Main system already stop~" << std::endl;
     
     sleep(60);
 

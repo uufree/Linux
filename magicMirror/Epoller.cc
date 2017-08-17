@@ -42,7 +42,7 @@ namespace unet
         void Epoller::epoll(ChannelMap& channelMap)
         {
             eventList.clear();
-            int activeEvents = ::epoll_wait(epollfd,&*eventList.begin(),65536,-1);
+            int activeEvents = ::epoll_wait(epollfd,&*eventList.begin(),65536,200);
 
             if(activeEvents > 0)
                 getActiveEvents(activeEvents,channelMap);
