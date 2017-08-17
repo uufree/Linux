@@ -101,8 +101,7 @@ namespace unet
                 unet::thread::MutexLockGuard guard(mutex);
                 timerMap.insert({now,timer_});
             }
-
-        }
+        }        
 
         void TimerQueue::addTimer(Timestamp&& time_,TimerPtr&& ptr)
         {

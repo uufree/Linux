@@ -57,7 +57,8 @@ namespace unet
 
         void TimerEventSystem::start()
         {
-            thread.start();
+//            thread.start();
+            ThreadStart();              
         }
 
         void TimerEventSystem::stop()
@@ -73,6 +74,7 @@ namespace unet
 
         void TimerEventSystem::InsertChannel(ChannelPtr&& channel)
         {
+            channel->setCloseCallBack(std::bind(&TimerEventSystem::EraseChannel,this,std::placeholders::_1));
             channelMap.insert(std::move(channel));
         }
 

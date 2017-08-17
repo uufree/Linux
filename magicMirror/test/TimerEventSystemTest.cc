@@ -23,8 +23,5 @@ int main(int argc,char** argv)
     system.addTimer(std::move(timer));
     
     system.start();
-    
-    sleep(60);
-
     return 0;
 }
