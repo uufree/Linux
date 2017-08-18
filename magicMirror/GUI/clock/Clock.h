@@ -12,6 +12,8 @@
 #include<vector>
 #include<utility>
 
+#include"../../unetComponent/Mutex.h"
+
 namespace utime
 {
     class UClock final
@@ -19,20 +21,20 @@ namespace utime
         friend bool operator==(const UClock& lhs,const UClock& rhs);
         
         public:
-            explicit UClock(){};
+            explicit UClock();
             UClock(const UClock& lhs);
             UClock(UClock&& lhs);
             UClock& operator=(const UClock& lhs);
             UClock& operator=(UClock&& lhs);
-            ~UClock(){};
+            ~UClock();
             
             void swap(UClock& lhs);
 
             const std::string& getHourAndMinutes() const
-            {return hourAndMinutes;}
+            {return hourAndMinutes;};
 
             const std::string& getMouthAndDays() const
-            {return mouthAndDays;}
+            {return mouthAndDays;};
         
             void update();
         

@@ -27,6 +27,9 @@ namespace utime
             vecStr.push_back(lhs.substr(last,index-last));
     }
     
+    UClock::UClock() 
+    {};
+
     UClock::UClock(const UClock& lhs) : hourAndMinutes(lhs.hourAndMinutes),
         mouthAndDays(lhs.mouthAndDays)
     {};
@@ -48,12 +51,14 @@ namespace utime
 
     UClock& UClock::operator=(UClock&& lhs)
     {
-        if(lhs == *this)
         hourAndMinutes = std::move(lhs.hourAndMinutes);
         mouthAndDays = std::move(lhs.mouthAndDays);
 
         return *this;
     }
+
+    UClock::~UClock()
+    {};
 
     void UClock::update()
     {
@@ -61,12 +66,7 @@ namespace utime
         std::string strTime = ctime(&time_);
         
         split(strTime," ",strList);
-/*
-        std::cout << "strList[0]" << strList[0] << std::endl;
-        std::cout << "strList[1]" << strList[1] << std::endl;
-        std::cout << "strList[2]" << strList[2] << std::endl;
-        std::cout << "strList[3]" << strList[3] << std::endl;
-*/
+       
         hourAndMinutes = strList[3];
         mouthAndDays = strList[0] + "," + strList[1] + " " + strList[2] + "th";
     };

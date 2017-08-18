@@ -8,8 +8,9 @@
 #ifndef _GUIRESOURCES_H
 #define _GUIRESOURCES_H
 
-#include"./clock/Clock.h"
-#include"../unetComponent/Mutex.h"
+#include"./GUI/clock/Clock.h"
+#include"./unetComponent/Mutex.h"
+#include"./timerSystem/TimerEventSystem.h"
 
 class GuiResources final
 {
@@ -22,20 +23,20 @@ class GuiResources final
         ~GuiResources();
         
         const std::string&  getClock_HourAndMinutes()
-        {return hourAndMinutes;};
+        {return clock.getHourAndMinutes();};
 
         const std::string&  getClock_MouthAndDays()
-        {return mouthAndDays;};
+        {return clock.getMouthAndDays();};
+        
+        void start();
 
     private:
         void ClockUpdate();
 
     private:
         unet::thread::MutexLock lock;
-        
+        unet::net::TimerEventSystem system;
         utime::UClock clock;
-        std::string hourAndMinutes;
-        std::string mouthAndDays;
 };
 
 #endif

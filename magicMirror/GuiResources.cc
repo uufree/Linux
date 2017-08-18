@@ -8,34 +8,39 @@
 #include"GuiResources.h"
 
 GuiResources::GuiResources() :
-    lock(),
+    system(),
     clock()
 {};
 
 GuiResources::GuiResources(GuiResources&& lhs) :
-    lock(std::move(lhs.lock)),
+    system(),
     clock(std::move(lhs.clock))
 {};
 
 GuiResources& GuiResources::operator=(GuiResources&& lhs)
 {
+    system = std::move(lhs.system);
     clock = std::move(lhs.clock);
-    hourAndMinutes = std::move(lhs.hourAndMinutes);
-    mouthAndDays = std::move(lhs.mouthAndDays);
 
     return *this;
 }
 
 GuiResources::~GuiResources()
-{};
+{
+    system.stop();
+};
 
 void GuiResources::ClockUpdate()
 {
+    unet::thread::MutexLockGuard guard(lock);
     clock.update();
-    
-    {
-        unet::thread::MutexLockGuard guard(lock);
-        hourAndMinutes = clock.getHourAndMinutes();
-        mouthAndDays = clock.getMouthAndDays();
+}
+
+void GuiResources::start()
+{
+    {//clock
+        unet::time::TimerPtr ptr(new unet::time::Timer(true,1));
+        ptr->setTimeCallBack(std::bind(&GuiResources::ClockUpdate,this));
+        system.addTimer(std::move(ptr));
     }
 }

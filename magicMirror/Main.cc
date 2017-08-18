@@ -10,7 +10,7 @@
 #include<utility>
 #include<unistd.h>
 #include<opencv2/opencv.hpp>
-#include"Clock.h"
+#include"GuiResources.h"
 
 using namespace cv;
 
@@ -20,13 +20,12 @@ int main(int argc,char** argv)
     namedWindow("home",CV_WINDOW_NORMAL);
     setWindowProperty("home",CV_WND_PROP_FULLSCREEN,CV_WINDOW_FULLSCREEN);
     
-    utime::UClock clock;
-    
+    GuiResources resources; 
+
     while(1)
     {
-        clock.update();
-        putText(img,clock.getMouthAndDays(),Point(100,700),FONT_HERSHEY_SIMPLEX,3,Scalar(255,255,255),3);
-        putText(img,clock.getHourAndMinutes(),Point(100,800),FONT_HERSHEY_SIMPLEX,2,Scalar(255,255,255),3);
+        putText(img,resources.getClock_MouthAndDays(),Point(100,700),FONT_HERSHEY_SIMPLEX,3,Scalar(255,255,255),3);
+        putText(img,resources.getClock_HourAndMinutes(),Point(100,800),FONT_HERSHEY_SIMPLEX,2,Scalar(255,255,255),3);
         imshow("home",img);
         waitKey(999);
         img.setTo(Scalar(0,0,0));
