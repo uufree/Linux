@@ -40,8 +40,6 @@ MESSAGE(STATUS "C++ COMPLIER: ${LINUX_TOOLCHAIN_ROOT}")
 ##########SET LIBRARY AND HEAD FILE PATH##########
 
 
-
-
 set(CMAKE_C_COMPILER g++)
 
 find_package(OpenCV REQUIRED)
