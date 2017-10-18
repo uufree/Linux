@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.0)  
+PROJECT(kfcDemo1)  
+SET(SRC_LIST test.cc)  
+find_package(OpenCV REQUIRED)  
+include_directories(${OpenCV_INCLUDE_DIRS})  
+ADD_EXECUTABLE(demo1 ${SRC_LIST})  
+target_link_libraries(demo1 ${OpenCV_LIBS})
