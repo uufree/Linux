@@ -9,32 +9,32 @@
 #include<opencv2/highgui/highgui.hpp>
 #include<opencv2/imgproc/imgproc.hpp>
 #include<opencv2/core/core.hpp>
-/*
-void readCallBack(unet::net::Buffer* inputBuffer,unet::net::Buffer* outputBuffer)
-{
-    std::string message;
-    inputBuffer->getCompleteMessageInBuffer(message);
 
-    std::cout << "readCallBack: " << message << std::endl;
-}
-
-void timeReadCallBack()
-{
-    std::cout << "Timer was locked!" << std::endl;
-}
-*/
+using namespace cv;
 
 int main(int argc,char** argv)
 {
     unet::net::socket::InetAddress serveraddr(6666);
-    unet::net::AsyncTcpServer server(serveraddr,1);
-    server.setReadCallBack(std::bind(&readCallBack,std::placeholders::_1,std::placeholders::_2));
-
-//    unet::time::TimerPtr timer(new unet::time::Timer(true,1));
-//    timer->setTimeCallBack(std::bind(&timeReadCallBack));
-//    server.addTimer(std::move(timer));
+    unet::net::socket::Socket listenfd(unet::net::socket::LISTEN);
+    unet::net::socket::bind(listenfd,serveraddr);
+    unet::net::socket::listen(listenfd);
+    int clientfd = unet::net::socket::accept(listenfd);
+    if(clientfd < 0)
+        std::cout << "create clientfd error!" << std::endl;
     
-    server.start();
+    namedWindow("server");
+    char* buf = new char[921600];
+    while(1)
+    {
+        unet::file::readn(clientfd,buf,921600);
+        Mat image(640,480,CV_8UC3);
+        image.data = (uchar*)buf;
+        image.reshape(640,480);
+        imshow("server",image);
+        
+        if(char(waitKey(25)) == 'q')
+            break;
+    }
 
     return 0;
 }
