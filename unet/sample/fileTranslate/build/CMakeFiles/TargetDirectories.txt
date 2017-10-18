@@ -1,0 +1,4 @@
+/home/uuchen/unet/sample/fileTranslate/build/CMakeFiles/rebuild_cache.dir
+/home/uuchen/unet/sample/fileTranslate/build/CMakeFiles/edit_cache.dir
+/home/uuchen/unet/sample/fileTranslate/build/CMakeFiles/client.dir
+/home/uuchen/unet/sample/fileTranslate/build/CMakeFiles/server.dir
