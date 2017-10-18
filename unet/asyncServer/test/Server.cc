@@ -27,9 +27,9 @@ int main(int argc,char** argv)
     while(1)
     {
         unet::file::readn(clientfd,buf,921600);
-        Mat image(640,480,CV_8UC3);
+        Mat image(480,640,CV_8UC3);
         image.data = (uchar*)buf;
-        image.reshape(640,480);
+        image.reshape(480,640);
         imshow("server",image);
         
         if(char(waitKey(25)) == 'q')
