@@ -5,13 +5,15 @@
 	> Created Time: 2017年04月15日 星期六 17时12分46秒
  ************************************************************************/
 
-#include"Socket.h"
-#include"InetAddress.h"
 #include<iostream>
 #include<opencv2/highgui/highgui.hpp>
 #include<opencv2/imgproc/imgproc.hpp>
 #include<opencv2/core/core.hpp>
 #include<string>
+
+#include"File.h"
+#include"Socket.h"
+#include"InetAddress.h"
 
 using namespace unet;
 using namespace cv;
@@ -84,7 +86,7 @@ int main(int argc,char** argv)
                 case char(51):
                     std::cout << "切换到避障模式～" << std::endl;
                     unet::file::writen(confd.getFd(),&ch,1);
-                    mode = 2;
+                    mode = 3;
                     break;
                 default:
                     break;
@@ -118,12 +120,12 @@ int main(int argc,char** argv)
                 case char(49):
                     std::cout << "切换到控制模式～" << std::endl;
                     unet::file::writen(confd.getFd(),&ch,1);
-                    mode = 2;
+                    mode = 1;
                     break;
                 case char(51):
                     std::cout << "切换到避障模式～" << std::endl;
                     unet::file::writen(confd.getFd(),&ch,1);
-                    mode = 2;
+                    mode = 3;
                     break;
                 default:
                     break;
@@ -157,7 +159,7 @@ int main(int argc,char** argv)
                 case char(49):
                     std::cout << "切换到控制模式～" << std::endl;
                     unet::file::writen(confd.getFd(),&ch,1);
-                    mode = 2;
+                    mode = 1;
                     break;
                 case char(50):
                     std::cout << "切换到寻迹模式～" << std::endl;

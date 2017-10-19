@@ -1,0 +1,3 @@
+/home/uuchen/git/smartCarClient/build/CMakeFiles/rebuild_cache.dir
+/home/uuchen/git/smartCarClient/build/CMakeFiles/edit_cache.dir
+/home/uuchen/git/smartCarClient/build/CMakeFiles/client.dir

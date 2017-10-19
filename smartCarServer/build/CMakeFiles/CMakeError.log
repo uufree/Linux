@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/uuchen/git/smartCarServer/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_aaf99/fast"
+/usr/bin/make -f CMakeFiles/cmTC_aaf99.dir/build.make CMakeFiles/cmTC_aaf99.dir/build
+make[1]: Entering directory '/home/uuchen/git/smartCarServer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_aaf99.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -fPIC    -o CMakeFiles/cmTC_aaf99.dir/CheckSymbolExists.c.o   -c /home/uuchen/git/smartCarServer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_aaf99
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aaf99.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC     CMakeFiles/cmTC_aaf99.dir/CheckSymbolExists.c.o  -o cmTC_aaf99 -rdynamic 
+CMakeFiles/cmTC_aaf99.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x1b)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_aaf99.dir/build.make:97: recipe for target 'cmTC_aaf99' failed
+make[1]: *** [cmTC_aaf99] Error 1
+make[1]: Leaving directory '/home/uuchen/git/smartCarServer/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_aaf99/fast' failed
+make: *** [cmTC_aaf99/fast] Error 2
+
+File /home/uuchen/git/smartCarServer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/uuchen/git/smartCarServer/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_46476/fast"
+/usr/bin/make -f CMakeFiles/cmTC_46476.dir/build.make CMakeFiles/cmTC_46476.dir/build
+make[1]: Entering directory '/home/uuchen/git/smartCarServer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_46476.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_46476.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_46476
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_46476.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_46476.dir/CheckFunctionExists.c.o  -o cmTC_46476 -rdynamic -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_46476.dir/build.make:97: recipe for target 'cmTC_46476' failed
+make[1]: *** [cmTC_46476] Error 1
+make[1]: Leaving directory '/home/uuchen/git/smartCarServer/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_46476/fast' failed
+make: *** [cmTC_46476/fast] Error 2
+
+
