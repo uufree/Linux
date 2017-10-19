@@ -1,4 +1,0 @@
-/home/uuchen/git/unet/asyncServer/test/build/CMakeFiles/rebuild_cache.dir
-/home/uuchen/git/unet/asyncServer/test/build/CMakeFiles/edit_cache.dir
-/home/uuchen/git/unet/asyncServer/test/build/CMakeFiles/client.dir
-/home/uuchen/git/unet/asyncServer/test/build/CMakeFiles/server.dir
