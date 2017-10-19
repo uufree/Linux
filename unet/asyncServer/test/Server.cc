@@ -14,6 +14,13 @@ using namespace cv;
 
 int main(int argc,char** argv)
 {
+    VideoCapture capture(0);
+    if(!capture.isOpened())
+    {
+        std::cout << "摄像头没有打开!" << std::endl;
+        return -1;
+    }
+
     unet::net::socket::InetAddress serveraddr(6666);
     unet::net::socket::Socket listenfd(unet::net::socket::LISTEN);
     unet::net::socket::bind(listenfd,serveraddr);
@@ -22,20 +29,26 @@ int main(int argc,char** argv)
     if(clientfd < 0)
         std::cout << "create clientfd error!" << std::endl;
     
-    namedWindow("server");
-    char* buf = new char[921600];
+    Mat image;
     while(1)
     {
-        unet::file::readn(clientfd,buf,921600);
-        Mat image(480,640,CV_8UC3);
-        image.data = (uchar*)buf;
-        image.reshape(480,640);
-        imshow("server",image);
+        capture >> image;
+        image = image.reshape(0,480);
+        std::string str((char*)image.data,921600);     
+        unet::file::writen(clientfd,str.c_str(),921600); 
         
         if(char(waitKey(25)) == 'q')
             break;
     }
-
+    
     return 0;
 }
+
+
+
+
+
+
+
+
 

@@ -18,40 +18,46 @@ using namespace cv;
 
 int main(int argc,char** argv)
 {
-    VideoCapture capture(0);
-    if(!capture.isOpened())
-    {
-        std::cout << "摄像头没有打开!" << std::endl;
-        return -1;
-    }
-    
     net::socket::InetAddress server("192.168.1.106",6666);
     net::socket::Socket confd(net::socket::CONNECT);
     net::socket::connect(confd,server);
     
-    Mat image;
     namedWindow("client");
+    char* buf = new char[921600];
+    char ch;
     while(1)
     {
-        capture >> image;
-        image = image.reshape(0,480);
-        std::string str((char*)image.data,921600);     
+        unet::file::readn(confd.getFd(),buf,921600);
+        Mat image(480,640,CV_8UC3);
+        image.data = (uchar*)buf;
+        image.reshape(480,640);
         imshow("client",image);
-        unet::file::writen(confd.getFd(),str.c_str(),921600); 
 
-        if(char(waitKey(25)) == 'q')
-            break;
-    }
+        switch (ch = char(waitKey(25)))
+        {
+            case 'q':
+                goto exit;
+            case char(27):
+                std::cout << "响应ESC～" << std::endl;
+                break;
+            case char(72):
+                std::cout << "响应前进～" << std::endl;
+                break;
+            case char(80):
+                std::cout << "响应后退～" << std::endl;
+                break;
+            case char(75):
+                std::cout << "响应左转～" << std::endl;
+                break;
+            case char(77):
+                std::cout << "响应右转～" << std::endl;
+                break;
+            default:
+                break;
+        }
+    } 
     
+exit:
     return 0;
 }
-
-
-
-
-
-
-
-
-
 
