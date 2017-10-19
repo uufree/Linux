@@ -25,6 +25,8 @@ int main(int argc,char** argv)
     namedWindow("client");
     char* buf = new char[921600];
     char ch;
+    int mode = 1;
+    bool runing = false;
     while(1)
     {
         unet::file::readn(confd.getFd(),buf,921600);
@@ -32,30 +34,141 @@ int main(int argc,char** argv)
         image.data = (uchar*)buf;
         image.reshape(480,640);
         imshow("client",image);
-
-        switch (ch = char(waitKey(25)))
-        {
-            case 'q':
-                goto exit;
-            case char(27):
-                std::cout << "响应ESC～" << std::endl;
-                break;
-            case char(72):
-                std::cout << "响应前进～" << std::endl;
-                break;
-            case char(80):
-                std::cout << "响应后退～" << std::endl;
-                break;
-            case char(75):
-                std::cout << "响应左转～" << std::endl;
-                break;
-            case char(77):
-                std::cout << "响应右转～" << std::endl;
-                break;
-            default:
-                break;
+            
+        if(mode == 1)
+        {//控制模式
+            switch (ch = char(waitKey(25)))
+            {
+                case char(27):
+                    std::cout << "响应ESC～" << std::endl;
+                    unet::file::writen(confd.getFd(),&ch,1);
+                    goto exit;
+                    break;
+                case 'w':
+                    std::cout << "响应前进～" << std::endl;
+                    unet::file::writen(confd.getFd(),&ch,1);
+                    break;
+                case 's':
+                    std::cout << "响应后退～" << std::endl;
+                    unet::file::writen(confd.getFd(),&ch,1);
+                    break;
+                case 'a':
+                    std::cout << "响应左转～" << std::endl;
+                    unet::file::writen(confd.getFd(),&ch,1);
+                    break;
+                case 'd':
+                    std::cout << "响应右转～" << std::endl;
+                    unet::file::writen(confd.getFd(),&ch,1);
+                    break;
+                case char(32):
+                {
+                    if(runing)
+                    {
+                        std::cout << "响应停止～" << std::endl;
+                        unet::file::writen(confd.getFd(),&ch,1);
+                        runing = false;
+                    }
+                    else
+                    {
+                        std::cout << "响应开始～" << std::endl;
+                        unet::file::writen(confd.getFd(),&ch,1);
+                        runing = true;
+                    }
+                    break;
+                }
+                case char(50):
+                    std::cout << "切换到寻迹模式～" << std::endl;
+                    unet::file::writen(confd.getFd(),&ch,1);
+                    mode = 2;
+                    break;
+                case char(51):
+                    std::cout << "切换到避障模式～" << std::endl;
+                    unet::file::writen(confd.getFd(),&ch,1);
+                    mode = 2;
+                    break;
+                default:
+                    break;
+            }
         }
-    } 
+        else if(mode == 2)
+        {//寻迹模式
+            switch (ch = char(waitKey(25)))
+            {
+                case char(27):
+                    std::cout << "响应ESC～" << std::endl;
+                    unet::file::writen(confd.getFd(),&ch,1);
+                    goto exit;
+                    break;
+                case char(32):
+                {
+                    if(runing)
+                    {
+                        std::cout << "响应停止～" << std::endl;
+                        unet::file::writen(confd.getFd(),&ch,1);
+                        runing = false;
+                    }
+                    else
+                    {
+                        std::cout << "响应开始～" << std::endl;
+                        unet::file::writen(confd.getFd(),&ch,1);
+                        runing = true;
+                    }
+                    break;
+                }
+                case char(49):
+                    std::cout << "切换到控制模式～" << std::endl;
+                    unet::file::writen(confd.getFd(),&ch,1);
+                    mode = 2;
+                    break;
+                case char(51):
+                    std::cout << "切换到避障模式～" << std::endl;
+                    unet::file::writen(confd.getFd(),&ch,1);
+                    mode = 2;
+                    break;
+                default:
+                    break;
+            }
+        }
+        else if(mode == 3)
+        {//避障模式
+            switch (ch = char(waitKey(25)))
+            {
+                case char(27):
+                    std::cout << "响应ESC～" << std::endl;
+                    unet::file::writen(confd.getFd(),&ch,1);
+                    goto exit;
+                    break;
+                case char(32):
+                {
+                    if(runing)
+                    {
+                        std::cout << "响应停止～" << std::endl;
+                        unet::file::writen(confd.getFd(),&ch,1);
+                        runing = false;
+                    }
+                    else
+                    {
+                        std::cout << "响应开始～" << std::endl;
+                        unet::file::writen(confd.getFd(),&ch,1);
+                        runing = true;
+                    }
+                    break;
+                }
+                case char(49):
+                    std::cout << "切换到控制模式～" << std::endl;
+                    unet::file::writen(confd.getFd(),&ch,1);
+                    mode = 2;
+                    break;
+                case char(50):
+                    std::cout << "切换到寻迹模式～" << std::endl;
+                    unet::file::writen(confd.getFd(),&ch,1);
+                    mode = 2;
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
     
 exit:
     return 0;

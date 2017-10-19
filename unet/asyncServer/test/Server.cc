@@ -25,20 +25,23 @@ int main(int argc,char** argv)
     unet::net::socket::Socket listenfd(unet::net::socket::LISTEN);
     unet::net::socket::bind(listenfd,serveraddr);
     unet::net::socket::listen(listenfd);
-    int clientfd = unet::net::socket::accept(listenfd);
-    if(clientfd < 0)
-        std::cout << "create clientfd error!" << std::endl;
     
     Mat image;
     while(1)
     {
-        capture >> image;
-        image = image.reshape(0,480);
-        std::string str((char*)image.data,921600);     
-        unet::file::writen(clientfd,str.c_str(),921600); 
+        int clientfd = unet::net::socket::accept(listenfd);
+        if(clientfd < 0)
+            std::cout << "create clientfd error!" << std::endl;
         
-        if(char(waitKey(25)) == 'q')
-            break;
+        while(1)
+        {
+            capture >> image;
+            image = image.reshape(0,480);
+            std::string str((char*)image.data,921600);     
+            unet::file::writen(clientfd,str.c_str(),921600); 
+
+            waitKey(20);
+        }
     }
     
     return 0;

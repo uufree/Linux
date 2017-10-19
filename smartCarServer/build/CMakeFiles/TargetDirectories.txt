@@ -1,3 +1,0 @@
-/home/uuchen/git/smartCar/build/CMakeFiles/edit_cache.dir
-/home/uuchen/git/smartCar/build/CMakeFiles/rebuild_cache.dir
-/home/uuchen/git/smartCar/build/CMakeFiles/demo1.dir
