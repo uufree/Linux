@@ -5,7 +5,7 @@
 	> Created Time: 2017年04月18日 星期二 17时19分56秒
  ************************************************************************/
 
-#include"../AsyncTcpServer.h"
+#include"InetAddress.h"
 #include<opencv2/highgui/highgui.hpp>
 #include<opencv2/imgproc/imgproc.hpp>
 #include<opencv2/core/core.hpp>

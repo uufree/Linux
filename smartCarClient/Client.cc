@@ -5,8 +5,8 @@
 	> Created Time: 2017年04月15日 星期六 17时12分46秒
  ************************************************************************/
 
-#include"../../Buffer.h"
-#include"../../Socket.h"
+#include"Socket.h"
+#include"InetAddress.h"
 #include<iostream>
 #include<opencv2/highgui/highgui.hpp>
 #include<opencv2/imgproc/imgproc.hpp>
