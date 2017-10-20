@@ -44,20 +44,36 @@ void threadFunc()
 
 int main(int argc,char** argv)
 {
+/*
     VideoCapture capture(0);
     if(!capture.isOpened())
     {
         std::cout << "摄像头没有打开!" << std::endl;
         return -1;
     }
-    
-    unet::net::socket::InetAddress serveraddr(6666);
+*/    
+    unet::net::socket::InetAddress serveraddr(16666);
     unet::net::socket::Socket listenfd(unet::net::socket::LISTEN);
     unet::net::socket::bind(listenfd,serveraddr);
     unet::net::socket::listen(listenfd);
     confd = unet::net::socket::accept(listenfd.getFd());
     isConnected = true;
-
+   
+    char ch;
+    while(1)
+    {
+        if(isConnected)
+        {
+            int n = unet::file::readn(confd,&ch,1);
+            if(n == 0)
+            {
+                std::cout << "client->confd is close!" << std::endl;
+                return 0;
+            }
+            handleEvent(ch);
+        }
+    }
+/*
     unet::thread::Thread thread;
     thread.setThreadCallBack(std::bind(&threadFunc));
     thread.start();
@@ -71,7 +87,7 @@ int main(int argc,char** argv)
         unet::file::writen(confd,str.c_str(),921600); 
         waitKey(20);
     }
-    
+*/    
     return 0;
 }
 
