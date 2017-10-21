@@ -62,7 +62,8 @@ namespace unet
 
                 private:
                     void init(uint16_t port);
-                
+                    void init(uint16_t port,const std::string& _addr);
+
                 private:
                     struct sockaddr_in addr;
                     std::string ip = "INADDR_ANY";

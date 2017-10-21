@@ -25,12 +25,12 @@ namespace unet
 
             InetAddress::InetAddress(const std::string& ip_,int port) : ip(ip_)
             {
-                init(static_cast<uint16_t>(port)); 
+                init(static_cast<uint16_t>(port),ip_); 
             }
 
             InetAddress::InetAddress(const std::string& ip_,uint16_t port): ip(ip_)
             {
-                init(port);
+                init(port,ip_);
             }
 
             void InetAddress::init(uint16_t port)
@@ -39,6 +39,14 @@ namespace unet
                 addr.sin_port = htons(port);
                 addr.sin_family = AF_INET;
                 addr.sin_addr.s_addr = htonl(INADDR_ANY);
+            }
+
+            void InetAddress::init(uint16_t port,const std::string& str)
+            {
+                bzero(&addr,sizeof(addr));
+                addr.sin_port = htons(port);
+                addr.sin_family = AF_INET;
+                inet_pton(AF_INET,str.c_str(),&addr.sin_addr);
             }
 
             InetAddress::InetAddress(InetAddress&& lhs) : addr(std::move(lhs.addr)),ip(std::move(lhs.ip))

@@ -20,7 +20,7 @@ using namespace cv;
 
 int main(int argc,char** argv)
 {
-    net::socket::InetAddress server("192.168.1.103",16666);
+    net::socket::InetAddress server("192.168.123.39",16666);
     net::socket::Socket confd(net::socket::CONNECT);
     net::socket::connect(confd,server);
 
@@ -29,16 +29,13 @@ int main(int argc,char** argv)
     char ch;
     int mode = 1;
     bool runing = false;
+    
     while(1)
     {
-/*
         unet::file::readn(confd.getFd(),buf,921600);
         Mat image(480,640,CV_8UC3);
         image.data = (uchar*)buf;
         image.reshape(480,640);
-        imshow("client",image);
-*/
-        Mat image(480,640,CV_8UC3,Scalar(0,0,0));
         imshow("client",image);
         
         if(mode == 1)
