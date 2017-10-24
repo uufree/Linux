@@ -46,15 +46,14 @@ void threadFunc()
 
 int main(int argc,char** argv)
 {
-
+/*
     VideoCapture capture(0);
     if(!capture.isOpened())
     {
         std::cout << "摄像头没有打开!" << std::endl;
         return -1;
     }
-    
-    
+*/   
     unet::net::socket::InetAddress serveraddr(16666);
     unet::net::socket::Socket listenfd(unet::net::socket::LISTEN);
     unet::net::socket::bind(listenfd,serveraddr);
@@ -65,7 +64,7 @@ int main(int argc,char** argv)
     unet::thread::Thread thread;
     thread.setThreadCallBack(std::bind(&threadFunc));
     thread.start();
-    
+/*    
     if(lzo_init() < 0)
     {
         std::cerr << "LZO压缩库初始化失败!" << std::endl;
@@ -74,18 +73,18 @@ int main(int argc,char** argv)
     lzo_voidp workMem = (lzo_voidp)malloc(LZO1X_1_MEM_COMPRESS);
     lzo_uint outLen;
     lzo_uint inLen = 921600;
-
-    Mat image;
-    lzo_bytep outBuf = (lzo_bytep)malloc(1024 * 500);
+*/
+//    Mat image;
+//    lzo_bytep outBuf = (lzo_bytep)malloc(1024 * 500);
     while(isConnected)
     {
-        capture >> image;
-        image = image.reshape(0,480);
-        std::string str((char*)image.data,921600);     
+//        capture >> image;
+//        image = image.reshape(0,480);
+//        std::string str((char*)image.data,921600);     
         
-        lzo1x_1_compress((unsigned char*)(str.c_str()),inLen,outBuf,&outLen,workMem);
+//        lzo1x_1_compress((unsigned char*)(str.c_str()),inLen,outBuf,&outLen,workMem);
         
-        unet::file::writen(confd,(char*)outBuf,outLen); 
+//        unet::file::writen(confd,(char*)outBuf,outLen); 
         waitKey(20);
     }
     

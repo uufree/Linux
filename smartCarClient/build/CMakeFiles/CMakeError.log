@@ -1,22 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/uuchen/git/smartCarClient/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c187d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c187d.dir/build.make CMakeFiles/cmTC_c187d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_3fa52/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3fa52.dir/build.make CMakeFiles/cmTC_3fa52.dir/build
 make[1]: Entering directory '/home/uuchen/git/smartCarClient/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c187d.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -fPIC    -o CMakeFiles/cmTC_c187d.dir/CheckSymbolExists.c.o   -c /home/uuchen/git/smartCarClient/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_c187d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c187d.dir/link.txt --verbose=1
-/usr/bin/cc  -fPIC     CMakeFiles/cmTC_c187d.dir/CheckSymbolExists.c.o  -o cmTC_c187d -rdynamic 
-CMakeFiles/cmTC_c187d.dir/CheckSymbolExists.c.o：在函数‘main’中：
+Building C object CMakeFiles/cmTC_3fa52.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -fPIC    -o CMakeFiles/cmTC_3fa52.dir/CheckSymbolExists.c.o   -c /home/uuchen/git/smartCarClient/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_3fa52
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3fa52.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC     CMakeFiles/cmTC_3fa52.dir/CheckSymbolExists.c.o  -o cmTC_3fa52 -rdynamic 
+CMakeFiles/cmTC_3fa52.dir/CheckSymbolExists.c.o：在函数‘main’中：
 CheckSymbolExists.c:(.text+0x1b)：对‘pthread_create’未定义的引用
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_c187d.dir/build.make:97: recipe for target 'cmTC_c187d' failed
-make[1]: *** [cmTC_c187d] Error 1
+CMakeFiles/cmTC_3fa52.dir/build.make:97: recipe for target 'cmTC_3fa52' failed
+make[1]: *** [cmTC_3fa52] Error 1
 make[1]: Leaving directory '/home/uuchen/git/smartCarClient/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_c187d/fast' failed
-make: *** [cmTC_c187d/fast] Error 2
+Makefile:126: recipe for target 'cmTC_3fa52/fast' failed
+make: *** [cmTC_3fa52/fast] Error 2
 
 File /home/uuchen/git/smartCarClient/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -36,20 +36,20 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/uuchen/git/smartCarClient/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ee149/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ee149.dir/build.make CMakeFiles/cmTC_ee149.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_75852/fast"
+/usr/bin/make -f CMakeFiles/cmTC_75852.dir/build.make CMakeFiles/cmTC_75852.dir/build
 make[1]: Entering directory '/home/uuchen/git/smartCarClient/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ee149.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_ee149.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_ee149
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee149.dir/link.txt --verbose=1
-/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_ee149.dir/CheckFunctionExists.c.o  -o cmTC_ee149 -rdynamic -lpthreads 
+Building C object CMakeFiles/cmTC_75852.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_75852.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_75852
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75852.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_75852.dir/CheckFunctionExists.c.o  -o cmTC_75852 -rdynamic -lpthreads 
 /usr/bin/ld: 找不到 -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_ee149.dir/build.make:97: recipe for target 'cmTC_ee149' failed
-make[1]: *** [cmTC_ee149] Error 1
+CMakeFiles/cmTC_75852.dir/build.make:97: recipe for target 'cmTC_75852' failed
+make[1]: *** [cmTC_75852] Error 1
 make[1]: Leaving directory '/home/uuchen/git/smartCarClient/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_ee149/fast' failed
-make: *** [cmTC_ee149/fast] Error 2
+Makefile:126: recipe for target 'cmTC_75852/fast' failed
+make: *** [cmTC_75852/fast] Error 2
 
 
