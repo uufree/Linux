@@ -14,15 +14,13 @@
 #include<string>
 
 #include"portab.h"
-#include"File.h"
 #include"Thread.h"
 #include"InetAddress.h"
 #include"Socket.h"
 #include"Mutex.h"
+#include"HandleEvent.h"
 
 using namespace cv;
-
-void handleEvent(char ch);
 
 static int confd;
 static bool isConnected = false;
@@ -30,6 +28,7 @@ static bool isConnected = false;
 void threadFunc()
 {
     char ch;
+    
     while(1)
     {
         if(isConnected)

@@ -32,10 +32,10 @@ int main(int argc,char** argv)
     
     while(1)
     {
-        unet::file::readn(confd.getFd(),buf,921600);
+//        unet::file::readn(confd.getFd(),buf,921600);
         Mat image(480,640,CV_8UC3);
-        image.data = (uchar*)buf;
-        image.reshape(480,640);
+//        image.data = (uchar*)buf;
+//        image.reshape(480,640);
         imshow("client",image);
         
         if(mode == 1)

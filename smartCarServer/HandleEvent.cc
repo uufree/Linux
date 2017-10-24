@@ -6,9 +6,18 @@
  ************************************************************************/
 
 #include<iostream>
+#include<wiringPi.h>
 
 static int mode = 1;
 static int runing = false;
+
+static const int PWM1 = 0;
+static const int PWM2 = 1;
+static const int LEFT1 = 2;
+static const int LEFT2 = 3;
+static const int RIGHT1 = 4;
+static const int RIGHT2 = 5;
+static int value = 512;
 
 void handleEvent(char ch)
 {
@@ -117,3 +126,30 @@ void handleEvent(char ch)
     }
 };
 
+void setup()
+{
+    if(wiringPiSetup())
+    {
+        std::cerr << "setup error!" << std::endl;
+        return -1;
+    }
+
+    pinMode(PWM1,PWM_OUTPUT);
+    pinMode(PWM2,PWM_OUTPUT);
+    pinMode(LEFT1,OUTPUT);
+    pinMode(LEFT2,OUTPUT);
+    pinMode(RIGHT1,OUTPUT);
+    pinMode(RIGHT2,OUTPUT);
+    
+    digitalWrite(PWM1,LOW);
+    digitalWrite(PWM2,LOW);
+    digitalWrite(LEFT1,LOW);
+    digitalWrite(LEFT2,LOW);
+    digitalWrite(RIGHT1,LOW);
+    digitalWrite(RIGHT2,LOW);
+}
+
+void forward()
+{
+     
+}
