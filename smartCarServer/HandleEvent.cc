@@ -151,5 +151,60 @@ void setup()
 
 void forward()
 {
-     
+    pwmWrite(PWM1,value);
+    pwmWrite(PWM2,value);
+
+    digitalWrite(LEFT1,HIGH);
+    digitalWrite(RIGHT1,HIGH);
+    digitalWrite(LEFT2,LOW);
+    digitalWrite(RIGHT2,LOW);
+}
+
+void backward()
+{
+    pwmWrite(PWM1,value);
+    pwmWrite(PWM2,value);
+
+    digitalWrite(LEFT1,LOW);
+    digitalWrite(RIGHT1,LOW);
+    digitalWrite(LEFT2,HIGH);
+    digitalWrite(RIGHT2,HIGH);
+}
+
+void run()
+{
+    forward();
+}
+
+void turnLeft()
+{
+    pwmWrite(PWM1,value);
+    pwmWrite(PWM2,value);
+
+    digitalWrite(LEFT1,LOW);
+    digitalWrite(LEFT2,HIGH);
+    digitalWrite(RIGHT1,HIGH);
+    digitalWrite(RIGHT2,LOW);
+}
+
+void turnRight()
+{
+    pwmWrite(PWM1,value);
+    pwmWrite(PWM2,value);
+
+    digitalWrite(LEFT1,HIGH);
+    digitalWrite(LEFT2,LOW);
+    digitalWrite(RIGHT1,LOW);
+    digitalWrite(RIGHT2,HIGH);
+}
+
+void stop()
+{
+    pwmWrite(PWM1,0);
+    pwmWrite(PWM1,0);
+
+    digitalWrite(LEFT1,LOW);
+    digitalWrite(RIGHT1,LOW);
+    digitalWrite(LEFT2,LOW);
+    digitalWrite(RIGHT2,LOW);
 }
