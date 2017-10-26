@@ -20,7 +20,7 @@ using namespace cv;
 
 int main(int argc,char** argv)
 {
-    net::socket::InetAddress server("192.168.123.39",16666);
+    net::socket::InetAddress server("192.168.1.107",16666);
     net::socket::Socket confd(net::socket::CONNECT);
     net::socket::connect(confd,server);
 

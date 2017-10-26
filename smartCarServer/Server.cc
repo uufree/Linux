@@ -4,12 +4,14 @@
 	> Mail: 1319081676@qq.com
 	> Created Time: 2017年04月18日 星期二 17时19分56秒
  ************************************************************************/
-
+/*
 #include<lzo/lzoconf.h>
 #include<lzo/lzo1x.h>
 #include<opencv2/highgui/highgui.hpp>
 #include<opencv2/imgproc/imgproc.hpp>
 #include<opencv2/core/core.hpp>
+*/
+
 #include<iostream>
 #include<string>
 
@@ -85,7 +87,8 @@ int main(int argc,char** argv)
 //        lzo1x_1_compress((unsigned char*)(str.c_str()),inLen,outBuf,&outLen,workMem);
         
 //        unet::file::writen(confd,(char*)outBuf,outLen); 
-        waitKey(20);
+//        waitKey(20);
+        sleep(100);
     }
     
     return 0;
