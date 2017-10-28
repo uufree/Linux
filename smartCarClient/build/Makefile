@@ -258,6 +258,33 @@ Socket.cc.s:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/Socket.cc.s
 .PHONY : Socket.cc.s
 
+i18nText.o: i18nText.cc.o
+
+.PHONY : i18nText.o
+
+# target to build an object file
+i18nText.cc.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/i18nText.cc.o
+.PHONY : i18nText.cc.o
+
+i18nText.i: i18nText.cc.i
+
+.PHONY : i18nText.i
+
+# target to preprocess a source file
+i18nText.cc.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/i18nText.cc.i
+.PHONY : i18nText.cc.i
+
+i18nText.s: i18nText.cc.s
+
+.PHONY : i18nText.s
+
+# target to generate assembly for a file
+i18nText.cc.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/i18nText.cc.s
+.PHONY : i18nText.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -282,6 +309,9 @@ help:
 	@echo "... Socket.o"
 	@echo "... Socket.i"
 	@echo "... Socket.s"
+	@echo "... i18nText.o"
+	@echo "... i18nText.i"
+	@echo "... i18nText.s"
 .PHONY : help
 
 

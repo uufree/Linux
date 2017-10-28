@@ -1,5 +1,7 @@
     mov ax,0xb800
     mov es,ax
+    
+    cld
 
     mov byte [es:0x00],'L'
     mov byte [es:0x01],0x07
@@ -86,6 +88,6 @@ infi:
     jmp near infi
     number db 0,0,0,0,0
     
-    times 203 db 0
+    times 202 db 0
               db 0x55,0xaa
 

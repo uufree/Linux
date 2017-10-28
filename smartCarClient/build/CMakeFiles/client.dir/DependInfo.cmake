@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/uuchen/git/smartCarClient/InetAddress.cc" "/home/uuchen/git/smartCarClient/build/CMakeFiles/client.dir/InetAddress.cc.o"
   "/home/uuchen/git/smartCarClient/Mutex.cc" "/home/uuchen/git/smartCarClient/build/CMakeFiles/client.dir/Mutex.cc.o"
   "/home/uuchen/git/smartCarClient/Socket.cc" "/home/uuchen/git/smartCarClient/build/CMakeFiles/client.dir/Socket.cc.o"
+  "/home/uuchen/git/smartCarClient/i18nText.cc" "/home/uuchen/git/smartCarClient/build/CMakeFiles/client.dir/i18nText.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

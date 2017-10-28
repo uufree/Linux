@@ -17,12 +17,16 @@ opencv2/core/core.hpp
 -
 string
 -
+string.h
+-
 File.h
 /home/uuchen/git/smartCarClient/File.h
 Socket.h
 /home/uuchen/git/smartCarClient/Socket.h
 InetAddress.h
 /home/uuchen/git/smartCarClient/InetAddress.h
+i18nText.h
+/home/uuchen/git/smartCarClient/i18nText.h
 
 /home/uuchen/git/smartCarClient/File.cc
 File.h
@@ -116,6 +120,18 @@ stdio.h
 stdlib.h
 -
 errno.h
+-
+
+/home/uuchen/git/smartCarClient/i18nText.cc
+i18nText.h
+/home/uuchen/git/smartCarClient/i18nText.h
+
+/home/uuchen/git/smartCarClient/i18nText.h
+opencv2/opencv.hpp
+-
+freetype2/ft2build.h
+-
+cwchar
 -
 
 /usr/local/include/opencv/cxcore.h
