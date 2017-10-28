@@ -11,6 +11,7 @@ int main(int argc,char** argv)
 {
     std::cout << "hello,git!" << std::endl;
     std::cout << "uuchen" << std::endl;
+    std::cout << "~~" << std::endl;
 
     return 0;
 }
