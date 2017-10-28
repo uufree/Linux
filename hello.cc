@@ -13,6 +13,8 @@ int main(int argc,char** argv)
     std::cout << "uuchen" << std::endl;
     std::cout << "~~" << std::endl;
     std::cout << "@@@@" << std::endl;
+    
+    std::cout << "00000000000000" << std::endl;
 
     return 0;
 }
